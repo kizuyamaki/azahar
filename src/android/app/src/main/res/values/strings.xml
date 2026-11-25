@@ -1150,4 +1150,9 @@
     <string name="update_check_channel_stable">Stable</string>
     <string name="update_check_channel_prerelease">Prerelease</string>
 
+    <string name="emulation_autosave_slot">Auto Save</string>
+    <string name="emulation_occupied_autosave_slot">Auto Save - %1$tF %1$tR</string>
+    <string name="emulation_autosave_interval">Auto Save Interval</string>
+    <string name="emulation_autosave_off">Off</string>
+    <string name="emulation_autosave_minutes">%1$d min</string>
 </resources>

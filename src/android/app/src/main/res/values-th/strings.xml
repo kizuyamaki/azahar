@@ -1,4 +1,1121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    </resources>
+    <!-- General application strings -->
+    <string name="app_disclaimer">ซอฟต์แวร์นี้ใช้รันเกมของเครื่องเล่นเกมพกพา Nintendo 3DS โดยไม่มีเกมรวมมาให้\n\nก่อนเริ่มเล่น โปรดเลือกโฟลเดอร์สำหรับเก็บข้อมูลผู้ใช้ของ Azahar\n\nคืออะไร:\n<a href='https://github.com/azahar-emu/azahar/wiki/Android-User-Data-and-Storage'>Wiki - ข้อมูลผู้ใช้และพื้นที่จัดเก็บของ Citra บน Android</a></string>
+    <string name="app_notification_channel_description">การแจ้งเตือนของอีมูเลเตอร์ Azahar 3DS</string>
+    <string name="app_notification_running">Azahar กำลังทำงาน</string>
+    <string name="app_game_install_description">ถัดไป ให้เลือกโฟลเดอร์เกม Azahar จะแสดงรอม 3DS ทั้งหมดในโฟลเดอร์ที่เลือกไว้ในแอป\n\nรอม CIA, อัปเดต และ DLC ต้องติดตั้งแยกต่างหาก โดยกดไอคอนโฟลเดอร์แล้วเลือกติดตั้ง CIA</string>
+
+    <!-- Home Strings -->
+    <string name="grid_menu_core_settings">ตั้งค่า</string>
+    <string name="home_options">ตัวเลือก</string>
+    <string name="home_search">ค้นหา</string>
+    <string name="home_games">เกม</string>
+    <string name="settings_description">ปรับแต่งการตั้งค่าอีมูเลเตอร์</string>
+    <string name="install_game_content">ติดตั้งไฟล์ CIA</string>
+    <string name="install_game_content_description">ติดตั้งเกม อัปเดต หรือ DLC</string>
+    <string name="share_log">แชร์ล็อก</string>
+    <string name="share_log_description">แชร์ไฟล์ล็อกของ Azahar เพื่อใช้แก้ไขปัญหา</string>
+    <string name="gpu_driver_manager">ตัวจัดการไดรเวอร์ GPU</string>
+    <string name="install_gpu_driver">ติดตั้งไดรเวอร์ GPU</string>
+    <string name="install_gpu_driver_description">ติดตั้งไดรเวอร์ทางเลือก เพื่อประสิทธิภาพหรือความแม่นยำที่อาจดีขึ้น</string>
+    <string name="driver_already_installed">ติดตั้งไดรเวอร์แล้ว</string>
+    <string name="custom_driver_not_supported">ไม่รองรับไดรเวอร์แบบกำหนดเอง</string>
+    <string name="custom_driver_not_supported_description">ขณะนี้อุปกรณ์เครื่องนี้ยังไม่รองรับการโหลดไดรเวอร์แบบกำหนดเอง\nลองกลับมาดูตัวเลือกนี้ใหม่ในอนาคต เผื่อมีการเพิ่มการรองรับ!</string>
+    <string name="custom_driver_non_adreno_warning">ตรวจพบ GPU ที่ไม่ใช่ Adreno</string>
+    <string name="custom_driver_non_adreno_warning_description">ไดรเวอร์แบบกำหนดเองส่วนใหญ่สร้างสำหรับ GPU Qualcomm Adreno ให้ติดตั้งเฉพาะไดรเวอร์ที่ทำมาสำหรับ GPU ของคุณ หากโหลดไดรเวอร์ไม่สำเร็จ Azahar จะกลับไปใช้ไดรเวอร์ของระบบ หากเกมแครช ให้เลือก \"ไดรเวอร์ GPU ของระบบ\"</string>
+    <string name="share_log_not_found">ไม่พบไฟล์ล็อก</string>
+    <string name="select_games_folder">เลือกโฟลเดอร์เกม</string>
+    <string name="select_games_folder_description">ให้ Azahar สร้างรายการเกมจากโฟลเดอร์นี้</string>
+    <string name="about">เกี่ยวกับ</string>
+    <string name="citra_description">อีมูเลเตอร์ 3DS แบบโอเพนซอร์ส\nเผยแพร่ภายใต้สัญญาอนุญาต GPLv3 หรือรุ่นที่ใหม่กว่า</string>
+    <string name="about_description">เวอร์ชันบิลด์ รายชื่อผู้พัฒนา และอื่นๆ</string>
+    <string name="games_dir_selected">เลือกโฟลเดอร์เกมแล้ว</string>
+    <string name="select_citra_user_folder_home_description">เปลี่ยนไฟล์ที่ Azahar ใช้โหลดเกม</string>
+    <string name="theme_and_color_description">ปรับรูปลักษณ์ของแอป</string>
+    <string name="install_cia_title">ติดตั้ง CIA</string>
+
+    <!-- Network Settings-->
+    <string name="preferences_network">เครือข่าย</string>
+    <string name="web_api_url">URL ของ Web API</string>
+    <string name="web_api_url_description">URL ของ Web API สำหรับฟังก์ชันห้องสาธารณะ</string>
+    <string name="network_token">โทเคนเครือข่าย</string>
+    <string name="network_token_description">โทเคนสำหรับฟังก์ชันห้องสาธารณะ</string>
+    <string name="username_uses_system">ค่านี้เชื่อมกับชื่อผู้ใช้ของระบบ 3DS</string>
+    <string name="username_invalid">ชื่อผู้ใช้ไม่ถูกต้อง ต้องเป็นตัวอักษรหรือตัวเลข 4 ถึง 20 ตัว</string>
+
+    <!-- GPU driver installation -->
+    <string name="select_gpu_driver">เลือกไดรเวอร์ GPU</string>
+    <string name="select_gpu_driver_title">ต้องการเปลี่ยนไดรเวอร์ GPU ปัจจุบันหรือไม่?</string>
+    <string name="select_gpu_driver_install">ติดตั้ง</string>
+    <string name="select_gpu_driver_default">ค่าเริ่มต้น</string>
+    <string name="select_gpu_driver_install_success">ติดตั้ง %s แล้ว</string>
+    <string name="select_gpu_driver_use_default">ใช้ไดรเวอร์ GPU ค่าเริ่มต้น</string>
+    <string name="select_gpu_driver_error">เลือกไดรเวอร์ไม่ถูกต้อง กลับไปใช้ค่าเริ่มต้นของระบบ!</string>
+    <string name="system_gpu_driver">ไดรเวอร์ GPU ของระบบ</string>
+    <string name="installing_driver">กำลังติดตั้งไดรเวอร์…</string>
+
+    <!-- About screen strings -->
+    <string name="copied_to_clipboard">คัดลอกไปยังคลิปบอร์ดแล้ว</string>
+    <string name="contributors">ผู้ร่วมพัฒนา</string>
+    <string name="contributors_description">ผู้ร่วมพัฒนาที่ทำให้ Azahar เกิดขึ้นได้</string>
+    <string name="licenses_description">โปรเจกต์ที่ Azahar สำหรับ Android นำมาใช้</string>
+    <string name="build">บิลด์</string>
+    <string name="licenses">สัญญาอนุญาต</string>
+
+    <!-- Setup strings -->
+    <string name="welcome">ยินดีต้อนรับ!</string>
+    <string name="welcome_description">เรียนรู้วิธีตั้งค่า &lt;b>Azahar&lt;/b> แล้วเริ่มเล่นได้เลย</string>
+    <string name="get_started">เริ่มต้นใช้งาน</string>
+    <string name="step_complete">เสร็จสิ้น!</string>
+    <string name="games">เกม</string>
+    <string name="games_description">เลือกโฟลเดอร์ &lt;b>เกม&lt;/b> ของคุณด้วยปุ่มด้านล่าง</string>
+    <string name="done">เสร็จแล้ว</string>
+    <string name="done_description">ตั้งค่าเรียบร้อย\nขอให้สนุกกับการเล่น!</string>
+    <string name="text_continue">ต่อไป</string>
+    <string name="notifications_permission">การแจ้งเตือน</string>
+    <string name="notifications_permission_description">ให้สิทธิ์การแจ้งเตือนด้วยปุ่มด้านล่าง</string>
+    <string name="give_permission">ให้สิทธิ์</string>
+    <string name="notification_warning">ข้ามการให้สิทธิ์การแจ้งเตือนหรือไม่?</string>
+    <string name="notification_warning_description">Azahar จะไม่สามารถแจ้งข้อมูลสำคัญให้คุณทราบได้</string>
+    <string name="filesystem_permission_warning_description">Azahar ต้องได้รับสิทธิ์จัดการไฟล์บนอุปกรณ์นี้ เพื่อเก็บและจัดการข้อมูลของตัวเอง\n\nโปรดให้สิทธิ์ \"ระบบไฟล์\" ก่อนดำเนินการต่อ</string>
+    <string name="camera_permission">กล้อง</string>
+    <string name="camera_permission_description">ให้สิทธิ์กล้องด้านล่างเพื่อจำลองกล้องของ 3DS</string>
+    <string name="microphone_permission">ไมโครโฟน</string>
+    <string name="microphone_permission_description">ให้สิทธิ์ไมโครโฟนด้านล่างเพื่อจำลองไมโครโฟนของ 3DS</string>
+    <string name="filesystem_permission">ระบบไฟล์</string>
+    <string name="filesystem_permission_description">ให้สิทธิ์ระบบไฟล์ด้านล่างเพื่อให้ Azahar เก็บไฟล์ได้</string>
+    <string name="lan_permission">การเข้าถึงเครือข่ายภายใน</string>
+    <string name="lan_permission_description">ให้สิทธิ์เข้าถึงเครือข่ายภายในเพื่อเชื่อมต่อกับเครื่อง 3DS จริง สำหรับตั้งค่าระบบและฟังก์ชันอื่นๆ</string>
+    <string name="lan_warning_description">Azahar ต้องได้รับสิทธิ์เข้าถึงเครือข่ายภายในเพื่อเชื่อมต่อกับเครื่อง 3DS จริง สำหรับตั้งค่าระบบและฟังก์ชันอื่นๆ</string>
+    <string name="permission_denied">ปฏิเสธสิทธิ์</string>
+    <string name="add_games_warning">ข้ามการเลือกโฟลเดอร์เกมหรือไม่?</string>
+    <string name="add_games_warning_description">หากไม่เลือกโฟลเดอร์ เกมจะไม่แสดงในรายการเกม</string>
+    <string name="permissions">สิทธิ์</string>
+    <string name="select_emulator_data_folders">โฟลเดอร์ข้อมูล</string>
+    <string name="select_emulator_data_folders_description"><![CDATA[เลือกโฟลเดอร์ข้อมูล<br/>(จำเป็นต้องเลือกโฟลเดอร์ผู้ใช้)]]></string>
+    <string name="permissions_description">ให้สิทธิ์เสริมเพื่อใช้ฟีเจอร์เฉพาะของอีมูเลเตอร์</string>
+    <string name="missing_permissions">สิทธิ์ที่ยังขาด</string>
+    <string name="warning_help">ช่วยเหลือ</string>
+    <string name="warning_skip">ข้าม</string>
+    <string name="warning_cancel">ยกเลิก</string>
+    <string name="select_citra_user_folder">เลือกโฟลเดอร์ผู้ใช้</string>
+    <string name="select_citra_user_folder_description"><![CDATA[เลือกโฟลเดอร์ <a href="https://github.com/azahar-emu/azahar/wiki/Android-User-Data-and-Storage">ข้อมูลผู้ใช้</a> ของคุณด้วยปุ่มด้านล่าง]]></string>
+    <string name="select_which_user_directory_to_use">ดูเหมือนว่าคุณตั้งค่าโฟลเดอร์ผู้ใช้ไว้ทั้งของ Lime3DS และ Azahar สาเหตุน่าจะมาจากการอัปเกรดมาใช้ Azahar แล้วเลือกโฟลเดอร์ผู้ใช้ต่างจากที่เคยใช้กับ Lime3DS\n\nเรื่องนี้อาจทำให้คุณคิดว่าไฟล์เซฟหรือการตั้งค่าหายไป ขออภัยหากเกิดเหตุการณ์ดังกล่าว\n\nต้องการกลับไปใช้โฟลเดอร์ผู้ใช้เดิมของ Lime3DS เพื่อกู้คืนการตั้งค่าและไฟล์เซฟจาก Lime3DS หรือจะใช้โฟลเดอร์ Azahar ปัจจุบันต่อ?\n\nไม่ว่าเลือกแบบไหน จะไม่มีการลบโฟลเดอร์ใดๆ และคุณสลับไปมาได้อย่างอิสระด้วยตัวเลือกเลือกโฟลเดอร์ผู้ใช้</string>
+    <string name="keep_current_azahar_directory">ใช้โฟลเดอร์ Azahar ปัจจุบันต่อ</string>
+    <string name="use_prior_lime3ds_directory">ใช้โฟลเดอร์ Lime3DS เดิม</string>
+    <string name="select">เลือก</string>
+    <string name="cannot_skip">ไม่สามารถข้ามการตั้งค่าโฟลเดอร์ผู้ใช้ได้</string>
+    <string name="cannot_skip_directory_description">ขั้นตอนนี้จำเป็นเพื่อให้ Azahar ทำงานได้ โปรดเลือกโฟลเดอร์ก่อน แล้วจึงดำเนินการต่อได้</string>
+    <string name="selecting_user_directory_without_write_permissions">คุณสูญเสียสิทธิ์เขียนข้อมูลในโฟลเดอร์ <a href="https://github.com/azahar-emu/azahar/wiki/Android-User-Data-and-Storage">ข้อมูลผู้ใช้</a> ซึ่งเป็นที่เก็บไฟล์เซฟและข้อมูลอื่นๆ เหตุการณ์นี้อาจเกิดหลังอัปเดตบางแอปหรืออัปเดต Android โปรดเลือกโฟลเดอร์ใหม่เพื่อขอสิทธิ์คืน แล้วจึงดำเนินการต่อได้</string>
+    <string name="invalid_selection">การเลือกไม่ถูกต้อง</string>
+    <string name="invalid_user_directory">โฟลเดอร์ผู้ใช้ที่เลือกไม่ถูกต้อง\nโปรดเลือกใหม่ โดยเข้าไปจากรากของพื้นที่จัดเก็บของอุปกรณ์</string>
+    <string name="filesystem_permission_lost">Azahar สูญเสียสิทธิ์จัดการไฟล์บนอุปกรณ์นี้ เหตุการณ์นี้อาจเกิดหลังอัปเดตบางแอปหรืออัปเดต Android โปรดให้สิทธิ์อีกครั้งในหน้าถัดไปเพื่อใช้งานแอปต่อ</string>
+    <string name="lan_permission_lost">Azahar สูญเสียสิทธิ์เข้าถึงเครือข่ายภายใน เหตุการณ์นี้อาจเกิดหลังอัปเดตบางแอปหรืออัปเดต Android โปรดให้สิทธิ์อีกครั้งในหน้าถัดไปเพื่อใช้งานแอปต่อ</string>
+    <string name="lan_permission_manual">โปรดให้สิทธิ์ \"อุปกรณ์ใกล้เคียง\"</string>
+    <string name="set_up_theme_settings">ตั้งค่าธีม</string>
+    <string name="setup_theme_settings_description">ปรับแต่งธีมของ Azahar ตามต้องการ</string>
+    <string name="setup_set_theme">ตั้งค่าธีม</string>
+
+    <!-- Search Strings -->
+    <string name="search_and_filter_games">ค้นหาและกรองเกม</string>
+    <string name="home_search_games">ค้นหาเกม</string>
+    <string name="search_recently_played">เล่นล่าสุด</string>
+    <string name="search_recently_added">เพิ่มล่าสุด</string>
+    <string name="search_installed">ติดตั้งแล้ว</string>
+
+    <!-- Input related strings -->
+    <string name="controller_auto_map">แมปคอนโทรลเลอร์อัตโนมัติ</string>
+    <string name="controller_auto_map_description">ใช้การแมปเกมแพดมาตรฐานกับทุกปุ่มและทุกแกน</string>
+    <string name="auto_map_prompt">กดปุ่มนี้บนคอนโทรลเลอร์ของคุณ!</string>
+    <string name="auto_map_image_description">ปุ่มหน้าของ 3DS เรียงเป็นรูปข้าวหลามตัด โดยไฮไลต์ที่ปุ่ม A</string>
+    <string name="controller_clear_all">ล้างการผูกปุ่มทั้งหมด</string>
+    <string name="controller_clear_all_confirm">การกระทำนี้จะลบการผูกปุ่มคอนโทรลเลอร์ทั้งหมดในตอนนี้</string>
+    <string name="controller_reset_all">รีเซ็ตการผูกปุ่มทั้งหมดเป็นค่ารวม</string>
+    <string name="controller_reset_all_confirm">การกระทำนี้จะรีเซ็ตการผูกปุ่มคอนโทรลเลอร์ทั้งหมดกลับเป็นค่ารวม</string>
+    <string name="controller_circlepad">เซอร์เคิลแพด</string>
+    <string name="controller_c">C-Stick</string>
+    <string name="controller_hotkeys">ปุ่มลัด</string>
+    <string name="controller_hotkeys_description">หากกำหนดปุ่ม \"เปิดใช้ปุ่มลัด\" ไว้ ต้องกดปุ่มนั้นร่วมกับปุ่มลัดที่กำหนดด้วย</string>
+    <string name="controller_hotkey_enable_button">เปิดใช้ปุ่มลัด</string>
+    <string name="controller_triggers">ทริกเกอร์</string>
+    <string name="controller_trigger">ทริกเกอร์</string>
+    <string name="controller_dpad">D-Pad</string>
+    <string name="controller_dpad_axis">D-Pad (แกน)</string>
+    <string name="controller_dpad_axis_description">คอนโทรลเลอร์บางรุ่นอาจแมป D-pad เป็นแกนไม่ได้ ถ้าเป็นเช่นนั้นให้ใช้ส่วน D-Pad (ปุ่ม) แทน</string>
+    <string name="controller_dpad_button">D-Pad (ปุ่ม)</string>
+    <string name="controller_dpad_button_description">แมป D-pad ที่นี่เฉพาะเมื่อมีปัญหากับการแมป D-Pad (แกน)</string>
+    <string name="controller_axis_vertical">แกนแนวตั้ง</string>
+    <string name="controller_axis_horizontal">แกนแนวนอน</string>
+    <string name="direction_up">ขึ้น</string>
+    <string name="direction_down">ลง</string>
+    <string name="direction_left">ซ้าย</string>
+    <string name="direction_right">ขวา</string>
+    <string name="input_dialog_title">ผูกปุ่ม %1$s %2$s</string>
+    <string name="input_dialog_description">กดหรือเลื่อนอินพุต</string>
+    <string name="input_binding">การผูกอินพุต</string>
+    <string name="input_binding_description">กดหรือเลื่อนอินพุตเพื่อผูกกับ %1$s</string>
+    <string name="input_binding_description_vertical_axis">ดันจอยสติ๊กขึ้น</string>
+    <string name="input_binding_description_horizontal_axis">ดันจอยสติ๊กไปทางขวา</string>
+    <string name="button_home">HOME</string>
+    <string name="button_swap">สลับหน้าจอ</string>
+    <string name="button_turbo">เทอร์โบ</string>
+    <string name="button_combo">ปุ่มคอมโบ</string>
+    <string name="input_message_analog_only">ต้องผูกปุ่มนี้กับอนาล็อกสติ๊กหรือแกน D-pad ของเกมแพด!</string>
+    <string name="input_message_button_only">ต้องผูกปุ่มนี้กับปุ่มของเกมแพด!</string>
+    <string name="turbo_toggle_hotkey">เทอร์โบ (สลับเปิด/ปิด)</string>
+    <string name="turbo_hold_hotkey">เทอร์โบ (กดค้าง)</string>
+    <string name="turbo_enabled_toast">เปิดความเร็วเทอร์โบ</string>
+    <string name="turbo_disabled_toast">ปิดความเร็วเทอร์โบ</string>
+    <string name="combo_button_settings">ตั้งค่าปุ่มคอมโบ</string>
+    <string name="combo_button_settings_description">เลือกว่าปุ่มคอมโบจะสั่งปุ่มใดบ้าง</string>
+
+    <!-- System files strings -->
+    <string name="setup_system_files">ไฟล์ระบบ</string>
+    <string name="setup_system_files_description">ดำเนินการกับไฟล์ระบบ เช่น ติดตั้งไฟล์ระบบหรือบูตเมนู HOME</string>
+    <string name="setup_tool_connect">เชื่อมต่อกับ Artic Setup Tool</string>
+    <string name="setup_system_files_preamble"><![CDATA[Azahar ต้องใช้ข้อมูลเฉพาะเครื่องและไฟล์เฟิร์มแวร์จากเครื่องจริง เพื่อใช้ฟีเจอร์บางอย่างได้ ไฟล์และข้อมูลเหล่านี้ตั้งค่าได้ด้วย <a href=https://github.com/azahar-emu/ArticSetupTool>Azahar Artic Setup Tool</a><br>หมายเหตุ:<ul><li><b>การดำเนินการนี้จะติดตั้งข้อมูลเฉพาะเครื่องลงใน Azahar อย่าแชร์โฟลเดอร์ user หรือ nand หลังตั้งค่าเสร็จ!</b></li><li>ระหว่างตั้งค่า Azahar จะเชื่อมกับเครื่องที่รัน Setup Tool คุณยกเลิกการเชื่อมได้ภายหลังจากแท็บไฟล์ระบบในเมนูตัวเลือกของอีมูเลเตอร์</li><li>อย่าออนไลน์ด้วย Azahar และเครื่อง 3DS ของคุณพร้อมกันหลังตั้งค่าไฟล์ระบบ เพราะอาจเกิดปัญหาได้</li><li>ต้องตั้งค่า 3DS รุ่นเก่าก่อน การตั้งค่า New 3DS จึงจะทำงานได้ (แนะนำให้ตั้งค่าทั้งคู่)</li><li>โหมดตั้งค่าทั้งสองแบบใช้ได้ ไม่ว่าเครื่องที่รัน Setup Tool จะเป็นรุ่นใด</li></ul>]]></string>
+    <string name="setup_system_files_detect">กำลังตรวจสอบสถานะไฟล์ระบบปัจจุบัน โปรดรอสักครู่...</string>
+    <string name="delete_system_files">ยกเลิกการเชื่อมข้อมูลเฉพาะเครื่อง</string>
+    <string name="delete_system_files_description"><![CDATA[การกระทำนี้จะยกเลิกการเชื่อมเครื่องจริงของคุณกับ Azahar โดยมีผลดังนี้<br><ul><li>OTP, SecureInfo และ LocalFriendCodeSeed ของคุณจะถูกลบออกจาก Azahar</li><li>รายชื่อเพื่อนจะถูกรีเซ็ต และบัญชี NNID/PNID ของคุณจะถูกออกจากระบบ</li><li>ไฟล์ระบบและเกมจาก eShop ที่ได้ผ่าน Azahar จะใช้งานไม่ได้ จนกว่าจะเชื่อมเครื่องเดิมอีกครั้งด้วยเครื่องมือตั้งค่า (ข้อมูลเซฟจะไม่สูญหาย)</li></ul><br>ต้องการดำเนินการต่อหรือไม่?]]></string>
+    <string name="setup_system_files_o3ds">ตั้งค่า 3DS รุ่นเก่า</string>
+    <string name="setup_system_files_n3ds">ตั้งค่า New 3DS</string>
+    <string name="setup_system_files_possible">สามารถตั้งค่าได้</string>
+    <string name="setup_system_files_o3ds_needed">ต้องตั้งค่า 3DS รุ่นเก่าก่อน</string>
+    <string name="setup_system_files_completed">ตั้งค่าเสร็จแล้ว</string>
+    <string name="setup_system_files_enter_address">ใส่ที่อยู่ของ Artic Setup Tool</string>
+    <string name="setup_system_files_preparing">กำลังเตรียมการตั้งค่า โปรดรอสักครู่...</string>
+    <string name="boot_home_menu">บูตเมนู HOME</string>
+    <string name="show_home_apps">แสดงแอปของเมนู HOME ในรายการเกม</string>
+    <string name="run_system_setup">รันการตั้งค่าระบบเมื่อเปิดเมนู HOME</string>
+    <string name="home_menu">เมนู HOME</string>
+
+    <!-- Generic buttons (Shared with lots of stuff) -->
+    <string name="generic_buttons">ปุ่ม</string>
+    <string name="button">ปุ่ม</string>
+
+    <!-- System settings strings -->
+    <string name="emulation_settings">การตั้งค่าการจำลอง</string>
+    <string name="username">ชื่อผู้ใช้</string>
+    <string name="new_3ds">โหมด New 3DS</string>
+    <string name="lle_applets">ใช้แอปเพล็ต LLE (หากติดตั้งไว้)</string>
+    <string name="apply_region_free_patch">แพตช์ปลดล็อกภูมิภาคให้เกมที่ติดตั้ง</string>
+    <string name="apply_region_free_patch_desc">แพตช์ภูมิภาคของเกมที่ติดตั้งให้ไม่ล็อกภูมิภาค เพื่อให้แสดงบนเมนู HOME เสมอ</string>
+    <string name="enable_required_online_lle_modules">เปิดใช้โมดูล LLE ที่จำเป็นสำหรับฟีเจอร์ออนไลน์ (หากติดตั้งไว้)</string>
+    <string name="enable_required_online_lle_modules_desc">เปิดใช้โมดูล LLE ที่จำเป็นสำหรับการเล่นหลายคนออนไลน์ การเข้า eShop และอื่นๆ</string>
+    <string name="clock">นาฬิกา</string>
+    <string name="init_clock">นาฬิกา</string>
+    <string name="init_clock_description">ตั้งนาฬิกาของ 3DS จำลองให้ตรงกับอุปกรณ์ของคุณ หรือเริ่มที่วันและเวลาจำลอง</string>
+    <string name="device_clock">นาฬิกาของอุปกรณ์</string>
+    <string name="simulated_clock">นาฬิกาจำลอง</string>
+    <string name="simulated_clock_description">หากตั้งนาฬิกาเป็น \"นาฬิกาจำลอง\" ตัวเลือกนี้จะเปลี่ยนวันและเวลาตายตัวที่ใช้เริ่มต้น</string>
+    <string name="profile_settings">การตั้งค่าโปรไฟล์</string>
+    <string name="emulated_region">ภูมิภาค</string>
+    <string name="emulated_language">ภาษา</string>
+    <string name="birthday">วันเกิด</string>
+    <string name="birthday_month">เดือน</string>
+    <string name="birthday_day">วัน</string>
+    <string name="country">ประเทศ</string>
+    <string name="play_coins">เหรียญเล่น</string>
+    <string name="steps_per_hour">จำนวนก้าวของเครื่องนับก้าวต่อชั่วโมง</string>
+    <string name="steps_per_hour_description">จำนวนก้าวต่อชั่วโมงที่เครื่องนับก้าวรายงาน ช่วงค่า 0 ถึง 65,535</string>
+    <string name="console_id">รหัสเครื่อง</string>
+    <string name="regenerate_console_id">สร้างรหัสเครื่องใหม่</string>
+    <string name="regenerate_console_id_description">การกระทำนี้จะแทนที่รหัสเครื่อง 3DS เสมือนปัจจุบันด้วยรหัสใหม่ และกู้รหัสเดิมกลับมาไม่ได้ อาจเกิดผลที่ไม่คาดคิดในเกมบางเกม และอาจล้มเหลวหากใช้ไฟล์เซฟ config ที่เก่า ต้องการดำเนินการต่อหรือไม่?</string>
+    <string name="mac_address">MAC Address</string>
+    <string name="regenerate_mac_address">สร้าง MAC Address ใหม่</string>
+    <string name="regenerate_mac_address_description">การกระทำนี้จะแทนที่ MAC address ปัจจุบันด้วยค่าใหม่ ไม่แนะนำให้ทำหากคุณได้ MAC address จากเครื่องจริงด้วยเครื่องมือตั้งค่า ต้องการดำเนินการต่อหรือไม่?</string>
+    <string name="plugin_loader">ตัวโหลดปลั๊กอิน 3GX</string>
+    <string name="plugin_loader_description">โหลดปลั๊กอิน 3GX จาก SD การ์ดจำลอง หากมี</string>
+    <string name="allow_plugin_loader">อนุญาตให้เกมเปลี่ยนสถานะตัวโหลดปลั๊กอิน</string>
+    <string name="allow_plugin_loader_description">อนุญาตให้แอปโฮมบรูเปิดตัวโหลดปลั๊กอิน แม้จะปิดไว้</string>
+    <string name="region_mismatch">คำเตือนภูมิภาคไม่ตรงกัน</string>
+    <string name="region_mismatch_emulated">การตั้งค่าประเทศไม่ถูกต้องสำหรับภูมิภาคจำลองที่เลือก</string>
+    <string name="region_mismatch_console">การตั้งค่าประเทศไม่ถูกต้องสำหรับเครื่องที่เชื่อมอยู่ในขณะนี้</string>
+    <string name="storage">พื้นที่จัดเก็บ</string>
+    <string name="compress_cia_installs">บีบอัดเนื้อหา CIA ที่ติดตั้ง</string>
+    <string name="compress_cia_installs_description">บีบอัดเนื้อหาของไฟล์ CIA เมื่อติดตั้งลง SD การ์ดจำลอง มีผลเฉพาะเนื้อหา CIA ที่ติดตั้งขณะเปิดใช้ตัวเลือกนี้</string>
+    <string name="async_fs_operations">การทำงานระบบไฟล์แบบอะซิงโครนัส</string>
+    <string name="async_fs_operations_description">ทำให้การเข้าถึงระบบไฟล์จำลองเป็นแบบอะซิงโครนัส ลดอาการกระตุกที่เกี่ยวกับระบบไฟล์ได้มาก แต่อาจทำให้โหลดนานขึ้นเล็กน้อย</string>
+
+    <string name="per_app_settings_unsupported">ไม่รองรับการตั้งค่าแยกรายเกม</string>
+    <string name="per_app_settings_unsupported_description">เกมนี้ไม่รองรับการตั้งค่าแยกรายเกม อาจเพราะเป็นแอปโฮมบรู</string>
+    <!-- Camera settings strings -->
+    <string name="inner_camera">กล้องด้านใน</string>
+    <string name="outer_left_camera">กล้องนอกด้านซ้าย</string>
+    <string name="outer_right_camera">กล้องนอกด้านขวา</string>
+    <string name="image_source">แหล่งภาพกล้อง</string>
+    <string name="image_source_description">กำหนดแหล่งภาพของกล้องเสมือน ใช้ไฟล์ภาพ หรือกล้องของอุปกรณ์ได้หากรองรับ</string>
+    <string name="camera_device">กล้อง</string>
+    <string name="camera_device_description">หากตั้ง \"แหล่งภาพ\" เป็น \"กล้องของอุปกรณ์\" ตัวเลือกนี้จะกำหนดกล้องจริงที่ใช้</string>
+    <string name="camera_facing_front">หน้า</string>
+    <string name="camera_facing_back">หลัง</string>
+    <string name="camera_facing_external">ภายนอก</string>
+    <string name="image_flip">พลิกภาพ</string>
+
+    <!-- Graphics settings strings -->
+    <string name="renderer">ตัวเรนเดอร์</string>
+    <string name="graphics_api">API กราฟิก</string>
+    <string name="spirv_shader_gen">เปิดใช้การสร้างเชเดอร์ SPIR-V</string>
+    <string name="spirv_shader_gen_description">สร้างเฟรกเมนต์เชเดอร์ที่ใช้จำลอง PICA ด้วย SPIR-V แทน GLSL</string>
+    <string name="disable_spirv_optimizer">ปิดตัวเพิ่มประสิทธิภาพ SPIR-V</string>
+    <string name="disable_spirv_optimizer_description">ปิดขั้นตอนเพิ่มประสิทธิภาพ SPIR-V ช่วยลดอาการกระตุกได้มาก โดยแทบไม่กระทบประสิทธิภาพ</string>
+    <string name="async_shaders">เปิดใช้การคอมไพล์เชเดอร์แบบอะซิงโครนัส</string>
+    <string name="async_shaders_description">คอมไพล์เชเดอร์ในเบื้องหลังเพื่อลดอาการกระตุกระหว่างเล่น เมื่อเปิดใช้ อาจเห็นภาพผิดเพี้ยนชั่วคราว</string>
+    <string name="linear_filtering">ฟิลเตอร์เชิงเส้น</string>
+    <string name="linear_filtering_description">เปิดใช้ฟิลเตอร์เชิงเส้น ทำให้ภาพในเกมดูนุ่มนวลขึ้น</string>
+    <string name="use_integer_scaling">ปรับขนาดแบบจำนวนเต็ม</string>
+    <string name="use_integer_scaling_description">ปรับขนาดหน้าจอด้วยตัวคูณจำนวนเต็มของหน้าจอ 3DS ต้นฉบับ สำหรับเลย์เอาต์ที่มีหน้าจอสองขนาด จะปรับขนาดจำนวนเต็มกับหน้าจอที่ใหญ่ที่สุด</string>
+    <string name="texture_filter_name">ฟิลเตอร์เท็กซ์เจอร์</string>
+    <string name="texture_filter_description">ปรับภาพเกมให้ดีขึ้นด้วยการใช้ฟิลเตอร์กับเท็กซ์เจอร์ ฟิลเตอร์ที่รองรับ ได้แก่ Anime4K Ultrafast, Bicubic, ScaleForce, xBRZ freescale และ MMPX</string>
+
+    <string name="delay_render_thread">หน่วงเธรดเรนเดอร์ของเกม</string>
+    <string name="delay_render_thread_description">หน่วงเธรดเรนเดอร์ของเกมเมื่อส่งข้อมูลไปยัง GPU ช่วยแก้ปัญหาประสิทธิภาพในเกม (จำนวนน้อยมาก) ที่เฟรมเรตไม่คงที่</string>
+    <string name="simulate_3ds_gpu_timings">จำลองจังหวะเวลา GPU ของ 3DS</string>
+    <string name="simulate_3ds_gpu_timings_description">หน่วงเหตุการณ์ GPU ทำงานเสร็จตามค่าที่วัดจากฮาร์ดแวร์จริง ทำให้เกมวัดเวลา GPU ได้สมจริงขึ้น ช่วยให้เกมที่เฟรมเรตไม่คงที่นิ่งขึ้น การปิดฟีเจอร์นี้อาจเพิ่มประสิทธิภาพในบางกรณีที่พบได้ยาก แต่แลกกับความเสถียร</string>
+    <string name="advanced">ขั้นสูง</string>
+    <string name="texture_sampling_name">การสุ่มตัวอย่างเท็กซ์เจอร์</string>
+    <string name="texture_sampling_description">เขียนทับฟิลเตอร์สุ่มตัวอย่างที่เกมใช้ มีประโยชน์ในบางกรณีกับเกมที่ทำงานผิดปกติเมื่อขยายความละเอียด หากไม่แน่ใจ ให้ตั้งเป็น ควบคุมโดยเกม</string>
+    <string name="use_skip_duplicate_frames">ข้ามการแสดงเฟรมที่ซ้ำกัน</string>
+    <string name="use_skip_duplicate_frames_description">ข้ามการแสดงเฟรมที่ไม่ซ้ำกัน และช่วยให้เครื่องมือสร้างเฟรมภายนอกทำงานได้ถูกต้องกับเกม 30fps</string>
+    <string name="use_limit_frames_ahead_of_gpu">จำกัดจำนวนเฟรมที่นำหน้า GPU</string>
+    <string name="use_limit_frames_ahead_of_gpu_description">จำกัดว่าเธรดจำลองจะนำหน้า GPU ได้กี่เฟรม การเปิดใช้อาจลดความหน่วงของการกดปุ่ม แต่อาจลดประสิทธิภาพ</string>
+    <string name="shaders_accurate_mul">การคูณแบบแม่นยำ</string>
+    <string name="shaders_accurate_mul_description">ใช้การคูณที่แม่นยำกว่าในเชเดอร์ฮาร์ดแวร์ ซึ่งอาจแก้บั๊กด้านภาพบางอย่าง เมื่อเปิดใช้ ประสิทธิภาพจะลดลง</string>
+    <string name="asynchronous_gpu">เปิดใช้การจำลอง GPU แบบอะซิงโครนัส</string>
+    <string name="asynchronous_gpu_description">ใช้เธรดแยกเพื่อจำลอง GPU แบบอะซิงโครนัส เมื่อเปิดใช้ ประสิทธิภาพจะดีขึ้น</string>
+    <string name="frame_limit_enable">จำกัดความเร็ว</string>
+    <string name="frame_limit_enable_description">เมื่อเปิดใช้ ความเร็วการจำลองจะถูกจำกัดตามเปอร์เซ็นต์ของความเร็วปกติที่กำหนด หากปิด ความเร็วจะไม่จำกัด และปุ่มลัดความเร็วเทอร์โบจะใช้ไม่ได้</string>
+    <string name="frame_limit_slider">เปอร์เซ็นต์จำกัดความเร็ว</string>
+    <string name="frame_limit_slider_description">กำหนดเปอร์เซ็นต์ที่ใช้จำกัดความเร็วการจำลอง ค่าเริ่มต้น 100% จะจำกัดที่ความเร็วปกติ ค่าที่สูงกว่าหรือต่ำกว่าจะเพิ่มหรือลดขีดจำกัดความเร็ว</string>
+    <string name="android_hide_images">ซ่อนรูปภาพ 3DS จาก Android</string>
+    <string name="android_hide_images_description">ป้องกันไม่ให้ Android จัดทำดัชนีรูปจากกล้อง 3DS ภาพหน้าจอ และเท็กซ์เจอร์กำหนดเอง และแสดงในแกลเลอรี อาจต้องรีบูตอุปกรณ์หลังเปลี่ยนค่านี้จึงจะมีผล</string>
+    <string name="turbo_limit">ขีดจำกัดความเร็วเทอร์โบ</string>
+    <string name="turbo_limit_description">ขีดจำกัดความเร็วการจำลองที่ใช้ขณะกดปุ่มลัดเทอร์โบ</string>
+    <string name="expand_to_cutout_area">ขยายไปยังพื้นที่รอยบาก</string>
+    <string name="expand_to_cutout_area_description">ขยายพื้นที่แสดงผลให้รวมพื้นที่รอยบาก (หรือรอยเว้า) ของหน้าจอ</string>
+    <string name="internal_resolution">ความละเอียดภายใน</string>
+    <string name="internal_resolution_description">กำหนดความละเอียดที่ใช้เรนเดอร์ ความละเอียดสูงช่วยให้ภาพสวยขึ้นมาก แต่กินประสิทธิภาพมากและอาจทำให้เกมบางเกมมีปัญหา</string>
+    <string name="internal_resolution_setting_auto">อัตโนมัติ (ตามขนาดหน้าจอ)</string>
+    <string name="internal_resolution_setting_1x">ต้นฉบับ (400x240)</string>
+    <string name="internal_resolution_setting_2x">2 เท่าของต้นฉบับ (800x480)</string>
+    <string name="internal_resolution_setting_3x">3 เท่าของต้นฉบับ (1200x720)</string>
+    <string name="internal_resolution_setting_4x">4 เท่าของต้นฉบับ (1600x960)</string>
+    <string name="internal_resolution_setting_5x">5 เท่าของต้นฉบับ (2000x1200)</string>
+    <string name="internal_resolution_setting_6x">6 เท่าของต้นฉบับ (2400x1440)</string>
+    <string name="internal_resolution_setting_7x">7 เท่าของต้นฉบับ (2800x1680)</string>
+    <string name="internal_resolution_setting_8x">8 เท่าของต้นฉบับ (3200x1920)</string>
+    <string name="internal_resolution_setting_9x">9 เท่าของต้นฉบับ (3600x2160)</string>
+    <string name="internal_resolution_setting_10x">10 เท่าของต้นฉบับ (4000x2400)</string>
+    <string name="internal_resolution_setting_11x">11 เท่าของต้นฉบับ (4400x2640)</string>
+    <string name="internal_resolution_setting_12x">12 เท่าของต้นฉบับ (4800x2880)</string>
+    <string name="internal_resolution_setting_13x">13 เท่าของต้นฉบับ (5200x3120)</string>
+    <string name="internal_resolution_setting_14x">14 เท่าของต้นฉบับ (5600x3360)</string>
+    <string name="internal_resolution_setting_15x">15 เท่าของต้นฉบับ (6000x3600)</string>
+    <string name="internal_resolution_setting_16x">16 เท่าของต้นฉบับ (6400x3840)</string>
+    <string name="internal_resolution_setting_17x">17 เท่าของต้นฉบับ (6800x4080)</string>
+    <string name="internal_resolution_setting_18x">18 เท่าของต้นฉบับ (7200x4320)</string>
+    <string name="performance_warning">การปิดตัวเลือกนี้จะลดประสิทธิภาพการจำลองลงมาก! เพื่อประสบการณ์ที่ดีที่สุด แนะนำให้เปิดตัวเลือกนี้ไว้</string>
+    <string name="debug_warning">คำเตือน: การแก้ไขการตั้งค่าเหล่านี้จะทำให้การจำลองช้าลง</string>
+    <string name="stereoscopy">ภาพสามมิติ</string>
+    <string name="render3d">โหมดภาพ 3 มิติสเตอริโอสโคปิก</string>
+    <string name="render3d_description">เลือกโหมดภาพ 3 มิติสเตอริโอสโคปิกสำหรับการเรนเดอร์ โหมดแบ่งซ้ายขวาเป็นที่นิยมที่สุดในปัจจุบัน โหมดแอนากลิฟและอินเตอร์เลซจะใช้กับทุกจอที่เชื่อมต่อเสมอ</string>
+    <string name="factor3d">ความลึก</string>
+    <string name="factor3d_description">กำหนดค่าของแถบเลื่อน 3D ควรตั้งสูงกว่า 0% เมื่อเปิดภาพ 3 มิติสเตอริโอสโคปิก\nหมายเหตุ: ค่าความลึกเกิน 100% ทำไม่ได้บนฮาร์ดแวร์จริง และอาจทำให้ภาพผิดเพี้ยน</string>
+    <string name="disable_right_eye_render">ปิดการเรนเดอร์ตาขวา</string>
+    <string name="disable_right_eye_render_description">เพิ่มประสิทธิภาพอย่างมากในบางเกม แต่อาจทำให้ภาพกะพริบในเกมอื่น</string>
+    <string name="swap_eyes_3d">สลับตา</string>
+    <string name="swap_eyes_3d_description">สลับว่าภาพของตาข้างไหนแสดงด้านใด เมื่อใช้ร่วมกับโหมดแบ่งซ้ายขวา จะมองเห็นภาพ 3 มิติได้ด้วยการตาเหล่!</string>
+    <string name="render_3d_which_display">เรนเดอร์ภาพ 3 มิติสเตอริโอสโคปิก</string>
+    <string name="render_3d_which_display_description">เลือกว่าจะเปิดภาพ 3 มิติสเตอริโอสโคปิกหรือไม่ และบนจอใด ตัวเลือกจอเดียวใช้ได้ผลเมื่อเชื่อมต่อหลายจอเท่านั้น</string>
+    <string name="render_3d_which_display_both">เปิด (ทุกจอ)</string>
+    <string name="render_3d_which_display_primary">เปิด (เฉพาะจอหลัก)</string>
+    <string name="render_3d_which_display_secondary">เปิด (เฉพาะจอรอง)</string>
+    <string name="cardboard_vr">Cardboard VR</string>
+    <string name="cardboard_screen_size">ขนาดหน้าจอ Cardboard</string>
+    <string name="cardboard_screen_size_description">ปรับขนาดหน้าจอเป็นเปอร์เซ็นต์ของขนาดเดิม</string>
+    <string name="cardboard_x_shift">การเลื่อนแนวนอน</string>
+    <string name="cardboard_x_shift_description">กำหนดเปอร์เซ็นต์ของพื้นที่ว่างที่จะเลื่อนหน้าจอตามแนวนอน ค่าบวกจะขยับภาพของสองตาเข้าใกล้กึ่งกลาง ค่าลบจะขยับออกห่าง</string>
+    <string name="cardboard_y_shift">การเลื่อนแนวตั้ง</string>
+    <string name="cardboard_y_shift_description">กำหนดเปอร์เซ็นต์ของพื้นที่ว่างที่จะเลื่อนหน้าจอตามแนวตั้ง ค่าบวกจะขยับภาพของสองตาลงไปทางด้านล่าง ค่าลบจะขยับขึ้นด้านบน</string>
+    <string name="use_shader_jit">Shader JIT</string>
+    <string name="use_disk_shader_cache">แคชเชเดอร์บนดิสก์</string>
+    <string name="use_disk_shader_cache_description">ลดอาการกระตุกด้วยการบันทึกและโหลดเชเดอร์ที่สร้างขึ้นจากดิสก์ ใช้ไม่ได้หากไม่เปิดเชเดอร์ฮาร์ดแวร์</string>
+    <string name="utility">เครื่องมือ</string>
+    <string name="dump_textures">ดัมป์เท็กซ์เจอร์</string>
+    <string name="dump_textures_description">เท็กซ์เจอร์จะถูกดัมป์ไปที่ dump/textures/[Title ID]/</string>
+    <string name="custom_textures">เท็กซ์เจอร์กำหนดเอง</string>
+    <string name="custom_textures_description">เท็กซ์เจอร์จะถูกโหลดจาก load/textures/[Title ID]/</string>
+    <string name="preload_textures">โหลดเท็กซ์เจอร์กำหนดเองล่วงหน้า</string>
+    <string name="preload_textures_description">โหลดเท็กซ์เจอร์กำหนดเองทั้งหมดลงหน่วยความจำ ฟีเจอร์นี้อาจใช้หน่วยความจำมาก</string>
+    <string name="async_custom_loading">โหลดเท็กซ์เจอร์กำหนดเองแบบอะซิงโครนัส</string>
+    <string name="async_custom_loading_description">โหลดเท็กซ์เจอร์กำหนดเองแบบอะซิงโครนัสด้วยเธรดเบื้องหลัง เพื่อลดอาการกระตุกขณะโหลด</string>
+
+    <!-- Audio settings strings -->
+    <string name="audio_volume">ระดับเสียง</string>
+    <string name="audio_stretch">การยืดเสียง</string>
+    <string name="audio_stretch_description">ยืดเสียงเพื่อลดอาการสะดุด เมื่อเปิดใช้ ความหน่วงของเสียงจะเพิ่มขึ้นและประสิทธิภาพลดลงเล็กน้อย</string>
+    <string name="realtime_audio">เปิดใช้เสียงแบบเรียลไทม์</string>
+    <string name="realtime_audio_description">ปรับความเร็วการเล่นเสียงตามเฟรมเรตของการจำลองที่ตก ทำให้เสียงเล่นด้วยความเร็วเต็มแม้เฟรมเรตของเกมต่ำ อาจทำให้เสียงไม่ซิงก์กับภาพ</string>
+    <string name="simulate_headphones_plugged">จำลองการเสียบหูฟัง</string>
+    <string name="simulate_headphones_plugged_description">จำลองว่ามีหูฟังเสียบอยู่กับเครื่อง 3DS จำลองหรือไม่</string>
+    <string name="audio_input_type">อุปกรณ์รับเสียงเข้า</string>
+    <string name="sound_output_mode">โหมดเสียงออก</string>
+
+    <!-- Debug settings strings -->
+    <string name="cpu_jit">CPU JIT</string>
+    <string name="cpu_jit_description">ใช้คอมไพเลอร์แบบ Just-in-Time (JIT) สำหรับการจำลอง CPU เมื่อเปิดใช้ ประสิทธิภาพของเกมจะดีขึ้นมาก</string>
+    <string name="use_fastinterp">ใช้อินเทอร์พรีเตอร์แบบเร็ว</string>
+    <string name="use_fastinterp_description">เมื่อปิด CPU JIT ให้ใช้อินเทอร์พรีเตอร์แบบเร็วแทนอินเทอร์พรีเตอร์รุ่นเก่า ต้องรีสตาร์ต</string>
+    <string name="hw_shaders">เปิดใช้เชเดอร์ฮาร์ดแวร์</string>
+    <string name="hw_shaders_description">ใช้ฮาร์ดแวร์จำลองเชเดอร์ของ 3DS เมื่อเปิดใช้ ประสิทธิภาพของเกมจะดีขึ้นมาก</string>
+    <string name="cpu_clock_speed">ความเร็วสัญญาณนาฬิกา CPU</string>
+    <string name="vsync">เปิดใช้ V-Sync</string>
+    <string name="vsync_description">ซิงก์เฟรมเรตของเกมกับอัตรารีเฟรชของอุปกรณ์ อาจเพิ่มความหน่วงของการกดปุ่ม แต่ช่วยลดภาพฉีกในบางกรณี</string>
+    <string name="renderer_debug">ตัวเรนเดอร์สำหรับดีบัก</string>
+    <string name="renderer_debug_description">บันทึกข้อมูลดีบักเพิ่มเติมที่เกี่ยวกับกราฟิก เมื่อเปิดใช้ ประสิทธิภาพของเกมจะลดลงมาก</string>
+    <string name="instant_debug_log">เขียนล็อกทันทีทุกข้อความ</string>
+    <string name="instant_debug_log_description">บันทึกล็อกดีบักลงไฟล์ทันที ใช้ตัวเลือกนี้หาก Azahar แครชแล้วล็อกถูกตัดขาด</string>
+    <string name="delay_start_lle_modules">หน่วงการเริ่มเมื่อใช้โมดูล LLE</string>
+    <string name="delay_start_lle_modules_description">หน่วงการเริ่มแอปเมื่อเปิดใช้โมดูล LLE</string>
+    <string name="deterministic_async_operations">การทำงานแบบอะซิงโครนัสที่กำหนดแน่นอน</string>
+    <string name="deterministic_async_operations_description">ทำให้การทำงานแบบอะซิงโครนัสมีผลลัพธ์แน่นอนเพื่อใช้ดีบัก การเปิดใช้อาจทำให้ค้าง</string>
+    <string name="enable_rpc_server">เปิดใช้เซิร์ฟเวอร์ RPC</string>
+    <string name="enable_rpc_server_desc">เปิดเซิร์ฟเวอร์ RPC ที่พอร์ต 45987 ทำให้อ่าน/เขียนหน่วยความจำของเกมจากระยะไกลได้</string>
+    <string name="toggle_unique_data_console_type">สลับประเภทเครื่องของข้อมูลเฉพาะเครื่อง</string>
+    <string name="toggle_unique_data_console_type_desc">สลับประเภทเครื่องของข้อมูลเฉพาะเครื่อง (3DS รุ่นเก่า &#8596; New 3DS) เพื่อดาวน์โหลดเฟิร์มแวร์ระบบของรุ่นตรงข้ามจากการตั้งค่าระบบได้</string>
+    <string name="shader_jit">เปิดใช้ Shader JIT</string>
+    <string name="shader_jit_description">ใช้เอนจิน JIT แทนอินเทอร์พรีเตอร์สำหรับการจำลองเชเดอร์แบบซอฟต์แวร์</string>
+
+  <!-- Layout settings strings -->
+    <string name="layout_screen_orientation">การวางแนวหน้าจอ</string>
+    <string name="layout_screen_orientation_auto_sensor">อัตโนมัติ</string>
+    <string name="layout_screen_orientation_landscape">แนวนอน</string>
+    <string name="layout_screen_orientation_landscape_reverse">แนวนอนกลับด้าน</string>
+    <string name="layout_screen_orientation_portrait">แนวตั้ง</string>
+    <string name="layout_screen_orientation_portrait_reverse">แนวตั้งกลับด้าน</string>
+    <string name="layouts_to_cycle">เลย์เอาต์ที่ใช้สลับ</string>
+    <string name="layouts_to_cycle_description">เลย์เอาต์ที่จะสลับเมื่อกดปุ่มลัดสลับเลย์เอาต์</string>
+    <string name="aspect_ratio_default">ค่าเริ่มต้น</string>
+
+    <string name="aspect_ratio_16_9">16:9</string>
+    <string name="aspect_ratio_4_3">4:3</string>
+    <string name="aspect_ratio_21_9_fullscreen">21:9</string>
+    <string name="aspect_ratio_16_10_fullscreen_stretched">16:10</string>
+    <string name="aspect_ratio_stretch">ยืดเต็มจอ</string>
+
+    <!-- Miscellaneous -->
+    <string name="clear">ล้าง</string>
+    <string name="slider_default">ค่าเริ่มต้น</string>
+    <string name="ini_saved">บันทึกการตั้งค่าแล้ว</string>
+    <string name="gameid_saved">บันทึกการตั้งค่าของ %1$s แล้ว</string>
+    <string name="error_saving">เกิดข้อผิดพลาดในการบันทึก %1$s.ini: %2$s</string>
+    <string name="saving">กำลังบันทึก…</string>
+    <string name="loading">กำลังโหลด…</string>
+    <string name="next">ถัดไป</string>
+    <string name="back">กลับ</string>
+    <string name="learn_more">ดูเพิ่มเติม</string>
+    <string name="close">ปิด</string>
+    <string name="reset_to_default">รีเซ็ตเป็นค่าเริ่มต้น</string>
+    <string name="option_default">ค่าเริ่มต้น</string>
+    <string name="none">ไม่มี</string>
+    <string name="auto">อัตโนมัติ</string>
+    <string name="off">ปิด</string>
+    <string name="install">ติดตั้ง</string>
+    <string name="delete">ลบ</string>
+    <string name="reset_all_settings">รีเซ็ตการตั้งค่าทั้งหมด</string>
+    <string name="reset_all_settings_description">การตั้งค่าทั้งหมดจะถูกรีเซ็ตเป็นค่าเริ่มต้น รวมถึงการตั้งค่าแยกรายเกมทั้งหมด ไม่สามารถยกเลิกได้</string>
+    <string name="settings_reset">รีเซ็ตการตั้งค่าแล้ว</string>
+    <string name="reset_settings_to_global">รีเซ็ตการตั้งค่าแยกรายเกม</string>
+    <string name="reset_settings_to_global_description">การตั้งค่าที่กำหนดเองทั้งหมดของเกมนี้จะถูกรีเซ็ตเป็นค่ารวม ไม่สามารถยกเลิกได้</string>
+    <string name="select_rtc_date">เลือกวันที่ RTC</string>
+    <string name="select_rtc_time">เลือกเวลา RTC</string>
+    <string name="reset_setting_confirmation">ต้องการรีเซ็ตการตั้งค่านี้กลับเป็นค่าเริ่มต้นหรือไม่?</string>
+    <string name="reset_setting_global_confirmation">ต้องการรีเซ็ตการตั้งค่าที่กำหนดเองนี้กลับเป็นค่ารวมหรือไม่?</string>
+    <string name="setting_not_editable">ตอนนี้ไม่สามารถแก้ไขสิ่งนี้ได้</string>
+    <string name="setting_disabled">ปิดใช้การตั้งค่า</string>
+    <string name="setting_disabled_description_incompatible_setting">การตั้งค่านี้ถูกปิดอยู่ เพราะการตั้งค่าอื่นไม่ได้ตั้งเป็นค่าที่เหมาะสม</string>
+    <string name="setting_disabled_description_angle">ไม่สามารถเปลี่ยนตัวเรนเดอร์ได้ เพราะอุปกรณ์ใช้ ANGLE สำหรับ OpenGL ซึ่งยังเข้ากันกับ Azahar ไม่ได้ในขณะนี้ จึงจะใช้ Vulkan</string>
+    <string name="setting_not_editable_description">ไม่สามารถเปลี่ยนตัวเลือกนี้ขณะเกมกำลังรันอยู่</string>
+    <string name="auto_select">เลือกอัตโนมัติ</string>
+    <string name="start">เริ่ม</string>
+    <string name="cancelling">กำลังยกเลิก…</string>
+    <string name="visibility">การมองเห็น</string>
+    <string name="information">ข้อมูล</string>
+    <string name="refresh">รีเฟรช</string>
+
+    <!-- Add Directory Screen-->
+    <string name="select_game_folder">เลือกโฟลเดอร์เกม</string>
+
+    <!-- Game Properties -->
+    <string name="properties">คุณสมบัติ</string>
+    <string name="properties_not_loaded">ไม่สามารถโหลดคุณสมบัติของเกมได้</string>
+
+    <!-- Preferences Screen -->
+    <string name="preferences_settings">ตั้งค่า</string>
+    <string name="preferences_general">ทั่วไป</string>
+    <string name="preferences_system">ระบบ</string>
+    <string name="preferences_camera">กล้อง</string>
+    <string name="preferences_controls">เกมแพด</string>
+    <string name="preferences_graphics">กราฟิก</string>
+    <string name="preferences_audio">เสียง</string>
+    <string name="preferences_debug">ดีบัก</string>
+    <string name="preferences_theme">ธีมและสี</string>
+    <string name="preferences_layout">เลย์เอาต์</string>
+
+    <!-- ROM loading errors -->
+    <string name="loader_error_generic_title">เกิดข้อผิดพลาดในการโหลดเกม</string>
+    <string name="loader_error_invalid_format">รูปแบบไฟล์เกมไม่ถูกต้อง</string>
+    <string name="loader_error_invalid_format_description"><![CDATA[ไม่รองรับรูปแบบไฟล์เกมนี้<br>โปรดตรวจสอบว่าใช้ไฟล์รูปแบบใดรูปแบบหนึ่งที่รองรับ:<ul><li>อิมเมจตลับเกม: <b>.cci/.zcci/.bcci/.3ds</b></li><li>ไฟล์ติดตั้ง: <b>.cia/.zcia/.bcia</b></li><li>แอปโฮมบรู: <b>.3dsx/.z3dsx</b></li><li>คอนเทนเนอร์ NCCH: <b>.cxi/.zcxi/.bcxi/.app</b></li><li>ไฟล์ ELF: <b>.elf/.axf</b></li></ul>]]></string>
+    <string name="loader_error_invalid_system_mode">โหมดระบบไม่ถูกต้อง</string>
+    <string name="loader_error_invalid_system_mode_description">ไม่สามารถโหลดเกมเฉพาะ New 3DS ได้ หากไม่เปิดโหมด New 3DS</string>
+    <string name="loader_error_applying_patches">เกิดข้อผิดพลาดในการใช้แพตช์</string>
+    <string name="loader_error_applying_patches_description">เกิดข้อผิดพลาดทั่วไประหว่างใช้แพตช์กับเกม โปรดดูรายละเอียดเพิ่มเติมในล็อก</string>
+    <string name="loader_error_patch_wrong_application">ใช้แพตช์ไม่สำเร็จ เพราะแพตช์นี้ออกแบบมาสำหรับเกมอื่น โปรดตรวจสอบว่าใช้แพตช์ที่ตรงกับเกม ภูมิภาค และเวอร์ชันที่ถูกต้อง</string>
+    <string name="loader_error_encrypted">รอมของคุณถูกเข้ารหัส</string>
+    <string name="loader_error_encrypted_description"><![CDATA[Azahar ไม่รองรับเกมที่ถูกเข้ารหัส อ่าน<a href="https://azahar-emu.org/blog/game-loading-changes/">บล็อกของเรา</a>เพื่อดูข้อมูลเพิ่มเติม]]></string>
+    <string name="loader_error_file_not_found">ไม่พบไฟล์รอม</string>
+    <string name="no_game_present">ไม่มีเกมที่บูตได้!</string>
+    <string name="invalid_rom">รอมไม่ถูกต้อง</string>
+    <string name="loader_error_generic">เกิดข้อผิดพลาดขณะโหลดรอม: \"%s (%d)\"</string>
+    <string name="core_error_success">สำเร็จ</string>
+    <string name="core_error_not_initialized">ยังไม่ได้เริ่มต้นระบบ</string>
+    <string name="core_error_get_loader">ไม่พบตัวโหลดสำหรับไฟล์นี้ ชนิดไฟล์ไม่เข้ากัน</string>
+    <string name="core_error_system_mode">อ่านไฟล์ไม่สำเร็จ</string>
+    <string name="core_error_loader">ข้อผิดพลาดทั่วไปของตัวโหลด</string>
+    <string name="core_error_loader_encrypted">ไฟล์ถูกเข้ารหัส</string>
+    <string name="core_error_loader_invalid_format">ไฟล์เสียหาย</string>
+    <string name="core_error_loader_gba_title">ไฟล์เป็นเกม GBA</string>
+    <string name="core_error_loader_error_patches">เกิดข้อผิดพลาดในการใช้แพตช์</string>
+    <string name="core_error_loader_patches_invalid_title">แพตช์เป็นของเกมอื่น</string>
+    <string name="core_error_system_files">ไม่พบไฟล์ระบบ</string>
+    <string name="core_error_savestate">บันทึกสถานะไม่สำเร็จ</string>
+    <string name="core_error_artic_disconnected">Artic Base ตัดการเชื่อมต่อ</string>
+    <string name="core_error_n3ds_application">ไฟล์เป็นเกม New 3DS</string>
+    <string name="core_error_core_exception_raised">เกิดข้อยกเว้นในแกนหลัก</string>
+    <string name="core_error_savestate_build_mismatch">เวอร์ชันของไฟล์บันทึกสถานะไม่ตรงกัน</string>
+    <string name="core_error_shutdown_requested">มีการร้องขอให้ปิดระบบ</string>
+    <string name="core_error_unknown">ข้อผิดพลาดที่ไม่ทราบสาเหตุ</string>
+    <string name="core_error_shader_cache_crash">แคชเชเดอร์ทำให้แครช</string>
+
+    <!-- Emulation Menu -->
+    <string name="emulation_menu_help">กดย้อนกลับเพื่อเปิดเมนู</string>
+    <string name="emulation_save_state">บันทึกสถานะ</string>
+    <string name="emulation_load_state">โหลดสถานะ</string>
+    <string name="emulation_empty_state_slot">สล็อต %1$d</string>
+    <string name="emulation_occupied_state_slot">สล็อต %1$d - %2$tF %2$tR</string>
+    <string name="emulation_show_fps">แสดง FPS</string>
+    <string name="emulation_haptic_feedback">การสั่นตอบสนอง</string>
+    <string name="emulation_overlay_options">ตัวเลือกปุ่มบนหน้าจอ</string>
+    <string name="emulation_configure_controls">ตั้งค่าปุ่มควบคุม</string>
+    <string name="emulation_edit_layout">แก้ไขเลย์เอาต์</string>
+    <string name="emulation_done">เสร็จแล้ว</string>
+    <string name="emulation_button_sliding">การเลื่อนนิ้วข้ามปุ่ม</string>
+    <string name="emulation_button_sliding_disabled">ค้างปุ่มที่กดตอนแรก</string>
+    <string name="emulation_button_sliding_enabled">ค้างปุ่มที่กดอยู่ในตอนนี้</string>
+    <string name="emulation_button_sliding_alternative">ค้างทั้งปุ่มที่กดตอนแรกและปุ่มที่กดอยู่ในตอนนี้</string>
+    <string name="emulation_toggle_controls">เปิด/ปิดปุ่มควบคุม</string>
+    <string name="emulation_control_scale">ปรับขนาด</string>
+    <string name="emulation_control_scale_global">ขนาดรวม</string>
+    <string name="emulation_control_scale_reset_all">รีเซ็ตทั้งหมด</string>
+    <string name="emulation_control_opacity">ปรับความโปร่งใส</string>
+    <string name="emulation_control_joystick_rel_center">จุดกลางจอยสัมพัทธ์</string>
+    <string name="emulation_control_dpad_slide_enable">การเลื่อนนิ้วบน D-Pad</string>
+    <string name="emulation_open_settings">เปิดการตั้งค่า</string>
+    <string name="emulation_open_cheats">เปิดโค้ดโกง</string>
+    <string name="emulation_aspect_ratio">อัตราส่วนภาพ</string>
+    <string name="emulation_switch_screen_layout">เลย์เอาต์หน้าจอแนวนอน</string>
+    <string name="emulation_switch_portrait_layout">เลย์เอาต์หน้าจอแนวตั้ง</string>
+    <string name="emulation_secondary_display_enable">เปิดใช้จอแสดงผลรอง</string>
+    <string name="emulation_secondary_display_enable_description">หากปิด Azahar จะให้ Android จัดการจอที่เชื่อมต่อ หากเปิดและมีหลายจอเชื่อมต่ออยู่ คุณเลือกจอที่ Azahar ใช้ได้ในเมนูด่วนของการจำลอง</string>
+    <string name="emulation_switch_secondary_layout">เลย์เอาต์จอแสดงผลรอง</string>
+    <string name="emulation_secondary_display_management">จอแสดงผลรอง</string>
+    <string name="emulation_select_secondary_display">เลือกจอแสดงผล</string>
+    <string name="emulation_switch_secondary_layout_description">เลย์เอาต์ที่ใช้กับจอรองที่เชื่อมต่อ ทั้งแบบมีสายและไร้สาย (Chromecast, Miracast)</string>
+    <string name="emulation_screen_layout_largescreen">จอใหญ่</string>
+    <string name="emulation_screen_layout_portrait">แนวตั้ง</string>
+    <string name="emulation_screen_layout_single">จอเดียว</string>
+    <string name="emulation_screen_layout_sidebyside">จอเรียงซ้ายขวา</string>
+    <string name="emulation_screen_layout_hybrid">จอแบบผสม</string>
+    <string name="emulation_screen_layout_original">ต้นฉบับ</string>
+
+    <string name="emulation_portrait_layout_top_full">ค่าเริ่มต้น</string>
+    <string name="emulation_secondary_display_opposite">จอฝั่งตรงข้าม</string>
+    <string name="emulation_screen_layout_custom">เลย์เอาต์กำหนดเอง</string>
+    <string name="bg_color">สีพื้นหลัง</string>
+    <string name="bg_color_description">สีที่แสดงด้านหลังหน้าจอระหว่างเล่น แสดงเป็นค่า RGB</string>
+    <string name="bg_red">แดง</string>
+    <string name="bg_green">เขียว</string>
+    <string name="bg_blue">น้ำเงิน</string>
+    <string name="second_screen_opacity">ความโปร่งใสของจอที่สองในเลย์เอาต์กำหนดเอง</string>
+    <string name="second_screen_opacity_description">ความโปร่งใสของหน้าจอ 3DS จอที่สองเมื่อใช้เลย์เอาต์หน้าจอกำหนดเอง มีประโยชน์เมื่อต้องการวางจอที่สองทับจอแรก</string>
+    <string name="emulation_small_screen_position">ตำแหน่งจอเล็ก</string>
+    <string name="small_screen_position_description">จอเล็กควรแสดงที่ตำแหน่งใดเมื่อเทียบกับจอใหญ่ในเลย์เอาต์จอใหญ่?</string>
+    <string name="small_screen_position_top_right">บนขวา</string>
+    <string name="small_screen_position_middle_right">กลางขวา</string>
+    <string name="small_screen_position_bottom_right">ล่างขวา (ค่าเริ่มต้น)</string>
+    <string name="small_screen_position_top_left">บนซ้าย</string>
+    <string name="small_screen_position_middle_left">กลางซ้าย</string>
+    <string name="small_screen_position_bottom_left">ล่างซ้าย</string>
+    <string name="small_screen_position_above">ด้านบน</string>
+    <string name="small_screen_position_below">ด้านล่าง</string>
+    <string name="screen_gap">ช่องว่างระหว่างจอ</string>
+    <string name="screen_gap_description">ช่องว่างระหว่างหน้าจอในทุกโหมดสองจอ วัดเป็นพิกเซลเทียบกับความสูง 240 พิกเซลของจอที่ใหญ่กว่า</string>
+    <string name="large_screen_proportion">สัดส่วนจอใหญ่</string>
+    <string name="large_screen_proportion_description">จอใหญ่ใหญ่กว่าจอเล็กกี่เท่าในเลย์เอาต์จอใหญ่?</string>
+    <string name="emulation_adjust_custom_layout">ปรับเลย์เอาต์กำหนดเองในการตั้งค่า</string>
+    <string name="emulation_landscape_custom_layout">เลย์เอาต์กำหนดเองแนวนอน</string>
+    <string name="emulation_portrait_custom_layout">เลย์เอาต์กำหนดเองแนวตั้ง</string>
+    <string name="emulation_top_screen">จอบน</string>
+    <string name="emulation_bottom_screen">จอล่าง</string>
+    <string name="emulation_custom_layout_x">ตำแหน่ง X</string>
+    <string name="emulation_custom_layout_y">ตำแหน่ง Y</string>
+    <string name="emulation_custom_layout_width">ความกว้าง</string>
+    <string name="emulation_custom_layout_height">ความสูง</string>
+    <string name="emulation_cycle_landscape_layouts">สลับเลย์เอาต์</string>
+    <string name="emulation_swap_screens">สลับหน้าจอ</string>
+    <string name="emulation_rotate_upright">หมุนหน้าจอให้ตั้งตรง</string>
+    <string name="emulation_touch_overlay_reset">รีเซ็ตปุ่มบนหน้าจอ</string>
+    <string name="emulation_show_controller_overlay">แสดงปุ่มควบคุมบนหน้าจอ</string>
+    <string name="emulation_close_game">ปิดเกม</string>
+    <string name="emulation_toggle_pause">สลับหยุดชั่วคราว</string>
+    <string name="miscellaneous">เบ็ดเตล็ด</string>
+    <string name="use_artic_base_controller">ใช้คอนโทรลเลอร์ Artic เมื่อเชื่อมต่อกับ Artic Base Server</string>
+    <string name="use_artic_base_controller_description">ใช้ปุ่มควบคุมที่ Artic Base Server ส่งมาเมื่อเชื่อมต่ออยู่ แทนอุปกรณ์อินพุตที่ตั้งค่าไว้</string>
+    <string name="emulation_close_game_message">แน่ใจหรือไม่ว่าต้องการปิดเกมที่กำลังเล่นอยู่?</string>
+    <string name="menu_emulation_amiibo">Amiibo</string>
+    <string name="menu_emulation_amiibo_load">โหลด</string>
+    <string name="menu_emulation_amiibo_remove">นำออก</string>
+    <string name="application_settings">การตั้งค่าแยกรายเกม</string>
+    <string name="global_settings">การตั้งค่ารวม</string>
+    <string name="use_global">กำหนดเองแล้ว: กดค้างเพื่อรีเซ็ตเป็นค่ารวม</string>
+    <string name="editing_global_when_customized">หมายเหตุ: มีการตั้งค่าที่กำหนดเองใช้งานอยู่สำหรับรายการนี้ แต่คุณกำลังแก้ไขการตั้งค่ารวม</string>
+    <string name="select_amiibo">เลือกไฟล์ Amiibo</string>
+    <string name="amiibo_load_error">โหลด Amiibo ไม่สำเร็จ</string>
+    <string name="amiibo_load_error_message">เกิดข้อผิดพลาดขณะโหลดไฟล์ Amiibo ที่ระบุ โปรดตรวจสอบว่าไฟล์ถูกต้อง</string>
+    <string name="pause_emulation">หยุดเกมชั่วคราว</string>
+    <string name="resume_emulation">เล่นต่อ</string>
+    <string name="lock_drawer">ล็อกเมนูข้าง</string>
+    <string name="unlock_drawer">ปลดล็อกเมนูข้าง</string>
+
+    <string name="write_permission_needed">ต้องอนุญาตให้เขียนข้อมูลลงที่เก็บข้อมูลภายนอก เพื่อให้อีมูเลเตอร์ทำงานได้</string>
+    <string name="load_settings">กำลังโหลดการตั้งค่า…</string>
+
+    <string name="external_storage_not_mounted">ต้องมีที่เก็บข้อมูลภายนอกพร้อมใช้งาน จึงจะใช้ Azahar ได้</string>
+
+    <string name="select_dir">เลือกโฟลเดอร์นี้</string>
+    <string name="empty_gamelist">ไม่พบไฟล์ หรือยังไม่ได้เลือกโฟลเดอร์เกม</string>
+
+    <string name="do_not_show_this_again">ไม่ต้องแสดงอีก</string>
+    <string name="searching_directory">กำลังค้นหาในโฟลเดอร์: %s</string>
+    <string name="move_data">ย้ายข้อมูล</string>
+    <string name="moving_data">กำลังย้ายข้อมูล…</string>
+    <string name="copy_file_name">คัดลอกไฟล์: %s</string>
+    <string name="copy_complete">คัดลอกเสร็จสิ้น</string>
+    <string name="savestates">บันทึกสถานะ</string>
+    <string name="savestate_warning_message">คำเตือน: การบันทึกสถานะไม่ใช่สิ่งทดแทนการเซฟในเกม และไม่ได้ออกแบบมาให้เชื่อถือได้\n\nใช้ด้วยความเสี่ยงของคุณเอง!</string>
+
+    <!-- Software Keyboard -->
+    <string name="software_keyboard">คีย์บอร์ดซอฟต์แวร์</string>
+    <string name="i_forgot">ฉันลืม</string>
+    <string name="fixed_length_required">ความยาวข้อความไม่ถูกต้อง (ต้องมี %d ตัวอักษร)</string>
+    <string name="max_length_exceeded">ข้อความยาวเกินไป (ต้องไม่เกิน %d ตัวอักษร)</string>
+    <string name="blank_input_not_allowed">ไม่อนุญาตให้ป้อนค่าว่าง</string>
+    <string name="empty_input_not_allowed">ไม่อนุญาตให้ป้อนค่าว่างเปล่า</string>
+    <string name="invalid_input">ข้อมูลที่ป้อนไม่ถูกต้อง</string>
+
+    <!-- Mii Selector -->
+    <string name="mii_selector">ตัวเลือก Mii</string>
+    <string name="standard_mii">Mii มาตรฐาน</string>
+
+    <!-- Camera -->
+    <string name="camera_select_image">เลือกรูปภาพ</string>
+    <string name="camera">กล้อง</string>
+    <string name="camera_permission_needed">Azahar ต้องเข้าถึงกล้องของคุณเพื่อจำลองกล้องของ 3DS\n\nหรือจะตั้ง \"แหล่งภาพ\" เป็น \"ภาพนิ่ง\" ในการตั้งค่ากล้องแทนก็ได้</string>
+
+    <!-- Microphone -->
+    <string name="microphone">ไมโครโฟน</string>
+    <string name="microphone_permission_needed">Azahar ต้องเข้าถึงไมโครโฟนของคุณเพื่อจำลองไมโครโฟนของ 3DS\n\nหรือจะเปลี่ยน \"อุปกรณ์รับเสียงเข้า\" ในการตั้งค่าเสียงแทนก็ได้</string>
+
+    <!-- Core Errors -->
+    <string name="abort_button">ยกเลิกการทำงาน</string>
+    <string name="continue_button">ดำเนินการต่อ</string>
+    <string name="system_archive_not_found">ไม่พบอาร์ไคฟ์ระบบ</string>
+    <string name="system_archive_not_found_message">ไม่พบ %s โปรดดัมป์อาร์ไคฟ์ระบบของคุณ\nการจำลองต่ออาจทำให้เกิดแครชและบั๊ก</string>
+    <string name="cia_file_not_found">ติดตั้งไม่สำเร็จ ไม่พบไฟล์ CIA</string>
+    <string name="system_archive_general">อาร์ไคฟ์ระบบ</string>
+    <string name="save_load_error">ข้อผิดพลาดในการบันทึก/โหลด</string>
+    <string name="savestate_error_message"><![CDATA[ไม่สามารถสร้างหรือกู้คืนไฟล์บันทึกสถานะได้<br/><br/>%1$s]]></string>
+    <string name="fatal_error">ข้อผิดพลาดร้ายแรง</string>
+    <string name="fatal_error_message">เกิดข้อผิดพลาดร้ายแรง โปรดดูรายละเอียดในล็อก\nการจำลองต่ออาจทำให้เกิดแครชและบั๊ก</string>
+    <string name="unsupported_encrypted">ไม่รองรับเกมที่ถูกเข้ารหัส</string>
+    <string name="invalid_system_mode">โหมดระบบไม่ถูกต้อง</string>
+    <string name="invalid_system_mode_message">ไม่สามารถโหลดเกมเฉพาะ New 3DS ได้ หากไม่เปิดโหมด New 3DS</string>
+    <string name="shader_cache_crash">แคชเชเดอร์ทำให้แครช</string>
+    <string name="shader_cache_crash_message"><![CDATA[Azahar ปิดตัวลงโดยไม่คาดคิดในครั้งล่าสุดที่สร้างแคชเชเดอร์ของเกมนี้ ไดรเวอร์กราฟิกอาจแครชที่เชเดอร์ตัวใดตัวหนึ่งในแคช และหากดำเนินการต่ออาจแครชอีก<br/><br/>หากต้องการรีเซ็ตแคชเชเดอร์ ให้กดค้างที่เกมในรายการเกม แตะ <b>ลบแคชเชเดอร์</b> แล้วเลือก <b>Vulkan</b>]]></string>
+    <string name="savestate_build_mismatch_message"><![CDATA[โหลดไฟล์บันทึกสถานะไม่ได้ เพราะสร้างขึ้นจาก Azahar คนละเวอร์ชัน:<br/><b>Azahar %1$s</b><br/><br/>โปรดอ่านบทความในบล็อกของเราเรื่อง <a href="https://azahar-emu.org/blog/understanding-save-states/">ทำความเข้าใจไฟล์บันทึกสถานะ</a> เพื่อดูข้อมูลเพิ่มเติม<br/><br/>หากต้องการกู้ความคืบหน้า ให้ดาวน์เกรดกลับไปใช้ <b>Azahar %1$s</b> โหลดไฟล์บันทึกสถานะนี้ แล้วใช้ฟังก์ชันเซฟที่มีในตัวเกม]]></string>
+
+    <!-- Disk Shader Cache -->
+    <string name="preparing_shaders">กำลังเตรียมเชเดอร์</string>
+    <string name="building_shaders">กำลังสร้าง %s</string>
+    <string name="delete_shader_cache">ลบแคชเชเดอร์</string>
+    <string name="delete_cache_select_backend">เลือก API กราฟิกที่จะลบแคชเชเดอร์</string>
+    <string name="deleting_shader_cache">กำลังลบแคชเชเดอร์ของเกมนี้ โปรดรอสักครู่…</string>
+    <string name="shader_cache_deleted">ลบแคชเชเดอร์แล้ว</string>
+
+    <!-- About Game Dialog -->
+    <string name="play">เล่น</string>
+    <string name="uninstall_cia">ถอนการติดตั้งเกม</string>
+    <string name="uninstalling">กำลังถอนการติดตั้ง...</string>
+    <string name="game_context_open_save_dir">เปิดโฟลเดอร์ข้อมูลเซฟ</string>
+    <string name="game_context_open_app">เปิดโฟลเดอร์เกม</string>
+    <string name="game_context_open_mods">เปิดโฟลเดอร์ม็อด</string>
+    <string name="game_context_open_textures">เปิดโฟลเดอร์เท็กซ์เจอร์</string>
+    <string name="game_context_open_dlc">เปิดโฟลเดอร์ DLC</string>
+    <string name="game_context_open_updates">เปิดโฟลเดอร์อัปเดต</string>
+    <string name="game_context_open_extra">เปิดโฟลเดอร์เพิ่มเติม</string>
+    <string name="game_context_uninstall_dlc">ถอนการติดตั้ง DLC</string>
+    <string name="game_context_uninstall_updates">ถอนการติดตั้งอัปเดต</string>
+    <string name="shortcut">ทางลัด</string>
+    <string name="shortcut_name">ชื่อทางลัด</string>
+    <string name="edit_icon">แก้ไขไอคอน</string>
+    <string name="create_shortcut">สร้างทางลัด</string>
+    <string name="shortcut_name_empty">ชื่อทางลัดต้องไม่ว่างเปล่า</string>
+    <string name="shortcut_image_stretch_toggle">ยืดภาพให้พอดี</string>
+    <string name="game_context_region">ภูมิภาค:</string>
+    <string name="game_context_id">ID:</string>
+    <string name="game_context_file">ไฟล์:</string>
+    <string name="game_context_type">ประเภท:</string>
+    <string name="game_context_playtime">เวลาเล่น:</string>
+    <string name="game_context_insert">ใส่ตลับเกม</string>
+    <string name="game_context_eject">ถอดตลับเกม</string>
+
+    <!-- Performance Overlay settings -->
+    <string name="performance_overlay_show">แสดงข้อมูลประสิทธิภาพบนหน้าจอ</string>
+    <string name="performance_overlay_options">ข้อมูลประสิทธิภาพบนหน้าจอ</string>
+    <string name="performance_overlay_enable">เปิดใช้ข้อมูลประสิทธิภาพบนหน้าจอ</string>
+    <string name="performance_overlay_options_description">ตั้งค่าว่าจะแสดงข้อมูลประสิทธิภาพบนหน้าจอหรือไม่ และจะแสดงข้อมูลอะไรบ้าง</string>
+    <string name="performance_overlay_show_fps">แสดง FPS</string>
+    <string name="performance_overlay_show_fps_description">แสดงจำนวนเฟรมต่อวินาทีปัจจุบัน</string>
+    <string name="performance_overlay_show_frametime">แสดงเฟรมไทม์</string>
+    <string name="performance_overlay_show_frametime_description">แสดงเฟรมไทม์ปัจจุบัน</string>
+
+    <string name="performance_overlay_show_speed">แสดงความเร็ว</string>
+    <string name="performance_overlay_show_speed_description">แสดงเปอร์เซ็นต์ความเร็วการจำลองปัจจุบัน</string>
+    <string name="performance_overlay_show_app_ram_usage">แสดงการใช้หน่วยความจำของแอป</string>
+    <string name="performance_overlay_show_app_ram_usage_description">แสดงปริมาณ RAM ที่อีมูเลเตอร์ใช้อยู่</string>
+    <string name="performance_overlay_show_available_ram">แสดงหน่วยความจำที่เหลือ</string>
+    <string name="performance_overlay_show_available_ram_description">แสดงปริมาณ RAM ที่ยังว่างอยู่</string>
+    <string name="performance_overlay_show_battery_temp">แสดงอุณหภูมิแบตเตอรี่</string>
+    <string name="performance_overlay_show_battery_temp_description">แสดงอุณหภูมิแบตเตอรี่ปัจจุบันเป็นเซลเซียสและฟาเรนไฮต์</string>
+    <string name="performance_overlay_position">ตำแหน่งที่แสดง</string>
+    <string name="performance_overlay_position_description">เลือกตำแหน่งที่จะแสดงข้อมูลประสิทธิภาพบนหน้าจอ</string>
+    <string name="performance_overlay_position_top_left">บนซ้าย</string>
+    <string name="performance_overlay_position_top_right">บนขวา</string>
+    <string name="performance_overlay_position_bottom_left">ล่างซ้าย</string>
+    <string name="performance_overlay_position_bottom_right">ล่างขวา</string>
+    <string name="performance_overlay_position_center_top">กึ่งกลางด้านบน</string>
+    <string name="performance_overlay_position_center_bottom">กึ่งกลางด้านล่าง</string>
+    <string name="performance_overlay_background">พื้นหลังข้อมูล</string>
+    <string name="performance_overlay_background_description">เพิ่มพื้นหลังด้านหลังข้อมูล เพื่อให้อ่านง่ายขึ้น</string>
+
+    <!-- Cheats -->
+    <string name="cheats">โค้ดโกง</string>
+    <string name="cheats_add">เพิ่มโค้ดโกง</string>
+    <string name="cheats_name">ชื่อ</string>
+    <string name="cheats_notes">บันทึกย่อ</string>
+    <string name="cheats_code">โค้ด</string>
+    <string name="cheats_edit">แก้ไข</string>
+    <string name="cheats_delete">ลบ</string>
+    <string name="cheats_delete_confirmation">แน่ใจหรือไม่ว่าต้องการลบ \"%1$s\"?</string>
+    <string name="cheats_error_no_name">ชื่อต้องไม่ว่างเปล่า</string>
+    <string name="cheats_error_no_code_lines">โค้ดต้องไม่ว่างเปล่า</string>
+    <string name="cheats_error_on_line">เกิดข้อผิดพลาดที่บรรทัด %1$d</string>
+
+    <!-- CIA Install -->
+    <plurals name="cia_install_toast">
+        <item quantity="one">กำลังติดตั้ง %d ไฟล์ ดูรายละเอียดเพิ่มเติมในการแจ้งเตือน</item>
+        <item quantity="other">กำลังติดตั้ง %d ไฟล์ ดูรายละเอียดเพิ่มเติมในการแจ้งเตือน</item>
+    </plurals>
+    <string name="cia_install_notification_channel_description">การแจ้งเตือนของ Azahar ระหว่างติดตั้ง CIA</string>
+    <string name="cia_install_notification_title">กำลังติดตั้ง CIA</string>
+    <string name="cia_install_notification_installing">กำลังติดตั้ง %1$s (%2$d/%3$d)</string>
+    <string name="cia_install_notification_success_title">ติดตั้ง CIA สำเร็จ</string>
+    <string name="cia_install_notification_error_title">ติดตั้ง CIA ไม่สำเร็จ</string>
+    <string name="cia_install_success">ติดตั้ง \"%s\" สำเร็จแล้ว</string>
+    <string name="cia_install_error_aborted">การติดตั้ง \"%s\" ถูกยกเลิก\n โปรดดูรายละเอียดเพิ่มเติมในล็อก</string>
+    <string name="cia_install_error_invalid">\"%s\" ไม่ใช่ไฟล์ CIA ที่ถูกต้อง</string>
+    <string name="cia_install_error_encrypted">ต้องถอดรหัส \"%s\" ก่อนจึงจะใช้กับ Azahar ได้\n ต้องใช้เครื่อง 3DS จริง</string>
+    <string name="cia_install_error_unknown">เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุขณะติดตั้ง \"%s\"\n โปรดดูรายละเอียดเพิ่มเติมในล็อก</string>
+
+    <!-- Memory Sizes -->
+    <string name="memory_byte">ไบต์</string>
+    <string name="memory_byte_shorthand">B</string>
+    <string name="memory_kilobyte">KB</string>
+    <string name="memory_megabyte">MB</string>
+    <string name="memory_gigabyte">GB</string>
+    <string name="memory_terabyte">TB</string>
+    <string name="memory_petabyte">PB</string>
+    <string name="memory_exabyte">EB</string>
+
+    <!-- System theme -->
+    <string name="change_theme_mode">โหมดธีม</string>
+    <string name="theme_mode_follow_system">ตามระบบ</string>
+    <string name="theme_mode_light">สว่าง</string>
+    <string name="theme_mode_dark">มืด</string>
+
+    <!-- Material You theme -->
+    <string name="material_you">Material You</string>
+    <string name="material_you_description">ใช้ธีมสีของระบบปฏิบัติการทั่วทั้งแอป (เมื่อเปิดใช้ จะแทนที่การตั้งค่า \"สีธีม\")</string>
+
+    <!-- Static theme color -->
+    <string name="static_theme_color">สีธีม</string>
+    <string name="static_theme_color_description">เปลี่ยนสีธีมของเมนูในแอป</string>
+
+    <!-- Black backgrounds theme -->
+    <string name="use_black_backgrounds">พื้นหลังสีดำ</string>
+    <string name="use_black_backgrounds_description">ใช้พื้นหลังสีดำเมื่อใช้ธีมมืด</string>
+
+    <!-- Language names -->
+    <string name="language_japanese">ญี่ปุ่น (日本語)</string>
+    <string name="language_english">อังกฤษ (English)</string>
+    <string name="language_french">ฝรั่งเศส (Français)</string>
+    <string name="language_german">เยอรมัน (Deutsch)</string>
+    <string name="language_italian">อิตาลี (Italiano)</string>
+    <string name="language_spanish">สเปน (Español)</string>
+    <string name="language_simplified_chinese">จีนตัวย่อ (简体中文)</string>
+    <string name="language_korean">เกาหลี (한국어)</string>
+    <string name="language_dutch">ดัตช์ (Nederlands)</string>
+    <string name="language_portuguese">โปรตุเกส (Português)</string>
+    <string name="language_russian">รัสเซีย (Русский)</string>
+    <string name="language_traditional_chinese">จีนตัวเต็ม (正體中文)</string>
+
+    <!-- Camera image sources -->
+    <string name="blank">ว่างเปล่า</string>
+    <string name="still_image">ภาพนิ่ง</string>
+    <string name="device_camera">กล้องของอุปกรณ์</string>
+
+    <!-- Camera device names -->
+    <string name="any_front_camera">กล้องหน้าตัวใดก็ได้</string>
+    <string name="any_back_camera">กล้องหลังตัวใดก็ได้</string>
+
+    <!-- Camera flip names -->
+    <string name="horizontal">แนวนอน</string>
+    <string name="vertical">แนวตั้ง</string>
+    <string name="reverse">กลับด้าน</string>
+
+    <!-- Audio input types -->
+    <string name="static_noise">เสียงรบกวนคงที่</string>
+    <string name="real_cubeb">อุปกรณ์จริง (cubeb)</string>
+    <string name="real_openal">อุปกรณ์จริง (OpenAL)</string>
+
+    <!-- Render 3D modes -->
+    <string name="side_by_side">แบ่งซ้ายขวา</string>
+    <string name="side_by_side_full">แบ่งซ้ายขวาเต็มความกว้าง</string>
+    <string name="anaglyph">แอนากลิฟ</string>
+    <string name="interlaced">อินเตอร์เลซ</string>
+    <string name="reverse_interlaced">อินเตอร์เลซกลับด้าน</string>
+
+    <!-- Texture filters -->
+    <string name="anime4k">Anime4K (เฉพาะ OpenGL)</string>
+    <string name="incompatible_texture_filter">ฟิลเตอร์เท็กซ์เจอร์ไม่เข้ากัน</string>
+    <string name="incompatible_texture_filter_description">ฟิลเตอร์เท็กซ์เจอร์ที่เลือก (Anime4K) ใช้ร่วมกับตัวเรนเดอร์ Vulkan ไม่ได้\nระบบจะตั้งฟิลเตอร์เท็กซ์เจอร์เป็น ไม่มี</string>
+
+    <!-- Texture Sampling names -->
+    <string name="game_controlled">ควบคุมโดยเกม</string>
+    <string name="nearest_neighbor">เพื่อนบ้านใกล้สุด</string>
+    <string name="linear">เชิงเส้น</string>
+
+    <!-- Sound output modes -->
+    <string name="mono">โมโน</string>
+    <string name="stereo">สเตอริโอ</string>
+    <string name="surround">เซอร์ราวด์</string>
+
+    <!-- Countries -->
+    <string name="japan">ญี่ปุ่น</string>
+    <string name="anguilla">แองกวิลลา</string>
+    <string name="antigua_and_barbuda">แอนติกาและบาร์บูดา</string>
+    <string name="argentina">อาร์เจนตินา</string>
+    <string name="aruba">อารูบา</string>
+    <string name="bahamas">บาฮามาส</string>
+    <string name="barbados">บาร์เบโดส</string>
+    <string name="belize">เบลีซ</string>
+    <string name="bolivia">โบลิเวีย</string>
+    <string name="brazil">บราซิล</string>
+    <string name="british_virgin_islands">หมู่เกาะบริติชเวอร์จิน</string>
+    <string name="canada">แคนาดา</string>
+    <string name="cayman_islands">หมู่เกาะเคย์แมน</string>
+    <string name="chile">ชิลี</string>
+    <string name="colombia">โคลอมเบีย</string>
+    <string name="costa_rica">คอสตาริกา</string>
+    <string name="dominica">โดมินิกา</string>
+    <string name="dominican_republic">สาธารณรัฐโดมินิกัน</string>
+    <string name="ecuador">เอกวาดอร์</string>
+    <string name="el_salvador">เอลซัลวาดอร์</string>
+    <string name="french_guiana">เฟรนช์เกียนา</string>
+    <string name="grenada">เกรเนดา</string>
+    <string name="guadeloupe">กวาเดอลูป</string>
+    <string name="guatemala">กัวเตมาลา</string>
+    <string name="guyana">กายอานา</string>
+    <string name="haiti">เฮติ</string>
+    <string name="honduras">ฮอนดูรัส</string>
+    <string name="jamaica">จาเมกา</string>
+    <string name="matinique">มาร์ตินีก</string>
+    <string name="mexico">เม็กซิโก</string>
+    <string name="monsterrat">มอนต์เซอร์รัต</string>
+    <string name="netherlands_antilles">เนเธอร์แลนด์แอนทิลลีส</string>
+    <string name="nicaragua">นิการากัว</string>
+    <string name="panama">ปานามา</string>
+    <string name="paraguay">ปารากวัย</string>
+    <string name="peru">เปรู</string>
+    <string name="saint_kittis_and_nevis">เซนต์คิตส์และเนวิส</string>
+    <string name="saint_lucia">เซนต์ลูเซีย</string>
+    <string name="saint_vincent_and_the_grenadines">เซนต์วินเซนต์และเกรนาดีนส์</string>
+    <string name="suriname">ซูรินาเม</string>
+    <string name="trinidad_and_tobago">ตรินิแดดและโตเบโก</string>
+    <string name="turks_and_caicos_islands">หมู่เกาะเติกส์และเคคอส</string>
+    <string name="united_states">สหรัฐอเมริกา</string>
+    <string name="uruguay">อุรุกวัย</string>
+    <string name="us_virgin_islands">หมู่เกาะเวอร์จินของสหรัฐฯ</string>
+    <string name="venezuela">เวเนซุเอลา</string>
+    <string name="albania">แอลเบเนีย</string>
+    <string name="australia">ออสเตรเลีย</string>
+    <string name="austria">ออสเตรีย</string>
+    <string name="belgium">เบลเยียม</string>
+    <string name="bosnia_and_herzegovnia">บอสเนียและเฮอร์เซโกวีนา</string>
+    <string name="botswana">บอตสวานา</string>
+    <string name="bulgaria">บัลแกเรีย</string>
+    <string name="croatia">โครเอเชีย</string>
+    <string name="cyprus">ไซปรัส</string>
+    <string name="czech_republic">สาธารณรัฐเช็ก</string>
+    <string name="denmark">เดนมาร์ก</string>
+    <string name="estonia">เอสโตเนีย</string>
+    <string name="finland">ฟินแลนด์</string>
+    <string name="france">ฝรั่งเศส</string>
+    <string name="germany">เยอรมนี</string>
+    <string name="greece">กรีซ</string>
+    <string name="hungary">ฮังการี</string>
+    <string name="iceland">ไอซ์แลนด์</string>
+    <string name="ireland">ไอร์แลนด์</string>
+    <string name="italy">อิตาลี</string>
+    <string name="latvia">ลัตเวีย</string>
+    <string name="lesotho">เลโซโท</string>
+    <string name="liechtenstein">ลิกเตนสไตน์</string>
+    <string name="lithuania">ลิทัวเนีย</string>
+    <string name="luxembourg">ลักเซมเบิร์ก</string>
+    <string name="macedonia">มาซิโดเนีย</string>
+    <string name="malta">มอลตา</string>
+    <string name="montenegro">มอนเตเนโกร</string>
+    <string name="mozambique">โมซัมบิก</string>
+    <string name="namibia">นามิเบีย</string>
+    <string name="netherlands">เนเธอร์แลนด์</string>
+    <string name="new_zealand">นิวซีแลนด์</string>
+    <string name="norway">นอร์เวย์</string>
+    <string name="poland">โปแลนด์</string>
+    <string name="portugal">โปรตุเกส</string>
+    <string name="romania">โรมาเนีย</string>
+    <string name="russia">รัสเซีย</string>
+    <string name="serbia">เซอร์เบีย</string>
+    <string name="slovakia">สโลวะเกีย</string>
+    <string name="slovenia">สโลวีเนีย</string>
+    <string name="south_africa">แอฟริกาใต้</string>
+    <string name="spain">สเปน</string>
+    <string name="swaziland">เอสวาตีนี</string>
+    <string name="sweden">สวีเดน</string>
+    <string name="switzerland">สวิตเซอร์แลนด์</string>
+    <string name="turkey">ตุรกี</string>
+    <string name="united_kingdom">สหราชอาณาจักร</string>
+    <string name="zambia">แซมเบีย</string>
+    <string name="zimbabwe">ซิมบับเว</string>
+    <string name="azerbaijan">อาเซอร์ไบจาน</string>
+    <string name="mauritania">มอริเตเนีย</string>
+    <string name="mali">มาลี</string>
+    <string name="niger">ไนเจอร์</string>
+    <string name="chad">ชาด</string>
+    <string name="sudan">ซูดาน</string>
+    <string name="eritrea">เอริเทรีย</string>
+    <string name="djibouti">จิบูตี</string>
+    <string name="somalia">โซมาเลีย</string>
+    <string name="andorra">อันดอร์รา</string>
+    <string name="gibraltar">ยิบรอลตาร์</string>
+    <string name="guernsey">เกิร์นซีย์</string>
+    <string name="isle_of_man">เกาะแมน</string>
+    <string name="jersey">เจอร์ซีย์</string>
+    <string name="monaco">โมนาโก</string>
+    <string name="taiwan">ไต้หวัน</string>
+    <string name="south_korea">เกาหลีใต้</string>
+    <string name="hong_kong">ฮ่องกง</string>
+    <string name="macau">มาเก๊า</string>
+    <string name="indonesia">อินโดนีเซีย</string>
+    <string name="singapore">สิงคโปร์</string>
+    <string name="thailand">ไทย</string>
+    <string name="philippines">ฟิลิปปินส์</string>
+    <string name="malaysia">มาเลเซีย</string>
+    <string name="china">จีน</string>
+    <string name="united_arab_emirates">สหรัฐอาหรับเอมิเรตส์</string>
+    <string name="india">อินเดีย</string>
+    <string name="egypt">อียิปต์</string>
+    <string name="oman">โอมาน</string>
+    <string name="qatar">กาตาร์</string>
+    <string name="kuwait">คูเวต</string>
+    <string name="saudi_arabia">ซาอุดีอาระเบีย</string>
+    <string name="syria">ซีเรีย</string>
+    <string name="bahrain">บาห์เรน</string>
+    <string name="jordan">จอร์แดน</string>
+    <string name="san_marino">ซานมารีโน</string>
+    <string name="vatican_city">นครวาติกัน</string>
+    <string name="bermuda">เบอร์มิวดา</string>
+
+    <!-- Regions (Japan, Australia, China and Taiwan are above) -->
+    <string name="north_america">อเมริกาเหนือ</string>
+    <string name="europe">ยุโรป</string>
+    <string name="korea">เกาหลี</string>
+    <string name="region_free">ไม่ล็อกภูมิภาค</string>
+    <string name="invalid_region">ภูมิภาคไม่ถูกต้อง</string>
+    <string name="region_get_error">เกิดข้อผิดพลาด โปรดรายงาน</string>
+
+    <!-- Months -->
+    <string name="january">มกราคม</string>
+    <string name="february">กุมภาพันธ์</string>
+    <string name="march">มีนาคม</string>
+    <string name="april">เมษายน</string>
+    <string name="may">พฤษภาคม</string>
+    <string name="june">มิถุนายน</string>
+    <string name="july">กรกฎาคม</string>
+    <string name="august">สิงหาคม</string>
+    <string name="september">กันยายน</string>
+    <string name="october">ตุลาคม</string>
+    <string name="november">พฤศจิกายน</string>
+    <string name="december">ธันวาคม</string>
+
+    <!-- Artic base -->
+    <string name="artic_server_comm_error">ติดต่อกับเซิร์ฟเวอร์ Artic Base ไม่สำเร็จ การจำลองจะหยุดทำงาน</string>
+    <string name="artic_base">Artic Base</string>
+    <string name="artic_base_connect_description">เชื่อมต่อกับเครื่องจริงที่รันเซิร์ฟเวอร์ Artic Base อยู่</string>
+    <string name="artic_base_connect">เชื่อมต่อ Artic Base</string>
+    <string name="artic_base_enter_address">ใส่ที่อยู่เซิร์ฟเวอร์ Artic Base</string>
+
+    <!-- Quickload&Save-->
+    <string name="emulation_quicksave_slot">เซฟด่วน</string>
+    <string name="emulation_quicksave">เซฟด่วน</string>
+    <string name="emulation_quickload">โหลดด่วน</string>
+    <string name="emulation_occupied_quicksave_slot">เซฟด่วน - %1$tF %1$tR</string>
+    <string name="quickload_not_found">ไม่มีเซฟด่วน</string>
+
+
+    <!-- File Compression -->
+    <string name="compress">บีบอัด</string>
+    <string name="compressing">กำลังบีบอัด…</string>
+    <string name="decompress">แตกไฟล์</string>
+    <string name="decompressing">กำลังแตกไฟล์…</string>
+    <string name="compress_success">บีบอัดเสร็จสมบูรณ์</string>
+    <string name="compress_unsupported">ไม่รองรับการบีบอัดไฟล์นี้</string>
+    <string name="compress_already">ไฟล์ถูกบีบอัดอยู่แล้ว</string>
+    <string name="compress_failed">บีบอัดไม่สำเร็จ</string>
+    <string name="decompress_success">แตกไฟล์เสร็จสมบูรณ์</string>
+    <string name="decompress_unsupported">ไม่รองรับการแตกไฟล์นี้</string>
+    <string name="decompress_not_compressed">ไฟล์ไม่ได้ถูกบีบอัด</string>
+    <string name="decompress_failed">แตกไฟล์ไม่สำเร็จ</string>
+    <string name="compress_decompress_installed_app">ไม่สามารถบีบอัดหรือแตกไฟล์เกมที่ติดตั้งแล้วได้</string>
+
+  <!-- Multiplayer -->
+    <string name="multiplayer">มัลติเพลเยอร์</string>
+    <string name="multiplayer_description">เปิดห้องเกมของคุณเอง หรือเข้าร่วมห้องที่มีอยู่เพื่อเล่นกับผู้อื่น</string>
+    <string name="multiplayer_room_title">ห้อง: %1$s</string>
+    <string name="multiplayer_console_id">รหัสเครื่อง：%1$s</string>
+    <string name="multiplayer_create_room">สร้าง</string>
+    <string name="multiplayer_join_room">เข้าร่วม</string>
+    <string name="multiplayer_public_room">ดูห้องสาธารณะ</string>
+    <string name="multiplayer_username">ชื่อผู้ใช้</string>
+    <string name="multiplayer_ip_address">IP Address</string>
+    <string name="multiplayer_ip_port">พอร์ต</string>
+    <string name="multiplayer_create_room_success">สร้างห้องสำเร็จ!</string>
+    <string name="multiplayer_join_room_success">เข้าร่วมห้องสำเร็จ!</string>
+    <string name="multiplayer_create_room_failed">สร้างห้องไม่สำเร็จ!</string>
+    <string name="multiplayer_join_room_failed">เข้าร่วมห้องไม่สำเร็จ!</string>
+    <string name="multiplayer_input_invalid">ที่อยู่ไม่ถูกต้อง หรือชื่อสั้นเกินไป!</string>
+    <string name="multiplayer_port_invalid">พอร์ตไม่ถูกต้อง!</string>
+    <string name="multiplayer_exit_room">ออกจากห้อง</string>
+    <string name="multiplayer_network_error">ข้อผิดพลาดของเครือข่าย</string>
+    <string name="multiplayer_lost_connection">ขาดการเชื่อมต่อ</string>
+    <string name="multiplayer_name_collision">ชื่อซ้ำกัน</string>
+    <string name="multiplayer_mac_collision">MAC ซ้ำกัน</string>
+    <string name="multiplayer_console_id_collision">รหัสเครื่องซ้ำกัน</string>
+    <string name="multiplayer_wrong_version">เวอร์ชันไม่ตรงกัน</string>
+    <string name="multiplayer_wrong_password">รหัสผ่านไม่ถูกต้อง</string>
+    <string name="multiplayer_could_not_connect">เชื่อมต่อไม่ได้</string>
+    <string name="multiplayer_room_is_full">ห้องเต็มแล้ว</string>
+    <string name="multiplayer_host_banned">เจ้าของห้องแบนคุณ</string>
+    <string name="multiplayer_permission_denied">ปฏิเสธสิทธิ์</string>
+    <string name="multiplayer_no_such_user">ไม่พบผู้ใช้นี้</string>
+    <string name="multiplayer_already_in_room">อยู่ในห้องแล้ว</string>
+    <string name="multiplayer_create_room_error">สร้างห้องผิดพลาด</string>
+    <string name="multiplayer_host_kicked">เจ้าของห้องเตะออก</string>
+    <string name="multiplayer_unknown_error">ข้อผิดพลาดที่ไม่ทราบสาเหตุ</string>
+    <string name="multiplayer_room_uninitialized">ห้องยังไม่ได้เริ่มต้น</string>
+    <string name="multiplayer_room_idle">ห้องว่าง</string>
+    <string name="multiplayer_room_joining">กำลังเข้าห้อง</string>
+    <string name="multiplayer_room_joined">เข้าห้องแล้ว</string>
+    <string name="multiplayer_room_moderator">ผู้ดูแลห้อง</string>
+    <string name="multiplayer_member_join">%1$s เข้าร่วม</string>
+    <string name="multiplayer_member_leave">%1$s ออกจากห้อง</string>
+    <string name="multiplayer_member_kicked">%1$s ถูกเตะออก</string>
+    <string name="multiplayer_member_banned">%1$s ถูกแบน</string>
+    <string name="multiplayer_address_unbanned">ปลดแบนที่อยู่แล้ว</string>
+    <string name="multiplayer_kick_member">เตะออก</string>
+    <string name="multiplayer_chat_input_hint">ส่งข้อความ……</string>
+    <string name="multiplayer_password">รหัสผ่าน</string>
+    <string name="original_button_text">เข้าร่วม</string>
+    <string name="disabled_button_text">กำลังเข้าร่วม...</string>
+    <string name="multiplayer_room_name">ชื่อห้อง</string>
+    <string name="multiplayer_room_name_invalid">ชื่อห้องต้องยาว 3 ถึง 20 ตัวอักษร</string>
+    <string name="multiplayer_max_players">ผู้เล่นสูงสุด (16)</string>
+    <string name="multiplayer_max_players_value">ผู้เล่นสูงสุด: %d</string>
+    <string name="multiplayer_chat">แชท</string>
+    <string name="multiplayer_more_options">ตัวเลือกเพิ่มเติม</string>
+    <string name="multiplayer_ip_copied">คัดลอก IP Address ไปยังคลิปบอร์ดแล้ว</string>
+    <string name="multiplayer_server_address">ที่อยู่เซิร์ฟเวอร์</string>
+    <string name="chat">แชท</string>
+    <string name="type_message">พิมพ์ข้อความ……</string>
+    <string name="send">ส่ง</string>
+    <string name="send_message">ส่งข้อความ</string>
+    <string name="multiplayer_moderation">การดูแลห้อง</string>
+    <string name="multiplayer_moderation_title">รายชื่อที่ถูกแบน</string>
+    <string name="multiplayer_no_bans">ไม่มีผู้ใช้ที่ถูกแบน</string>
+    <string name="multiplayer_unban_title">ปลดแบนผู้ใช้</string>
+    <string name="multiplayer_unban">ปลดแบน</string>
+    <string name="multiplayer_unban_message">แน่ใจหรือไม่ว่าต้องการปลดแบน %1$s?</string>
+    <string name="multiplayer_ban">แบนผู้ใช้</string>
+    <string name="multiplayer_room_browser">ห้องสาธารณะ</string>
+    <string name="multiplayer_no_rooms_found">ไม่พบห้องสาธารณะ</string>
+    <string name="multiplayer_password_required">ต้องใช้รหัสผ่าน</string>
+    <string name="multiplayer_game">เกม</string>
+    <string name="multiplayer_no_game_info">เกมใดก็ได้</string>
+    <string name="multiplayer_password_protected">ห้องที่มีรหัสผ่าน</string>
+    <string name="multiplayer_hide_full_rooms">ซ่อนห้องที่เต็ม</string>
+    <string name="multiplayer_hide_empty_rooms">ซ่อนห้องที่ว่าง</string>
+    <string name="multiplayer_tap_refresh_to_check_again">แตะรีเฟรชเพื่อตรวจสอบอีกครั้ง</string>
+    <string name="multiplayer_search_public_lobbies">ค้นหาห้องสาธารณะ...</string>
+    <string name="multiplayer_game_name">เกมที่ต้องการ</string>
+    <string name="prefered_game_name">เกมที่ต้องการ</string>
+    <string name="multiplayer_no_game">ไม่พบเกม</string>
+    <string name="no_preference">ไม่เลือก</string>
+
+    <!-- Update Checker -->
+    <string name="update_available">มีอัปเดตใหม่</string>
+    <string name="update_available_description">มี Azahar เวอร์ชันใหม่กว่า (เวอร์ชัน %1$s)\nต้องการดาวน์โหลดหรือไม่?</string>
+    <string name="check_for_updates">ตรวจสอบอัปเดต</string>
+    <string name="check_for_updates_description">แสดงการแจ้งเตือนในแอปเมื่อมีอัปเดตของ Azahar</string>
+    <string name="update_check_channel">ช่องทางอัปเดต</string>
+    <string name="update_check_channel_description">ช่องทางอัปเดตที่ใช้ตอนตรวจสอบอัปเดต</string>
+    <string name="update_check_channel_stable">เสถียร</string>
+    <string name="update_check_channel_prerelease">ก่อนวางจำหน่าย</string>
+
+    <string name="emulation_autosave_slot">เซฟอัตโนมัติ</string>
+    <string name="emulation_occupied_autosave_slot">เซฟอัตโนมัติ - %1$tF %1$tR</string>
+    <string name="emulation_autosave_interval">ความถี่เซฟอัตโนมัติ</string>
+    <string name="emulation_autosave_off">ปิด</string>
+    <string name="emulation_autosave_minutes">ทุก %1$d นาที</string>
+
+</resources>

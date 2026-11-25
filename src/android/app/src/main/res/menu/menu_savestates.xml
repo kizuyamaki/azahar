@@ -9,4 +9,7 @@
         android:id="@+id/menu_emulation_load_state"
         android:title="@string/emulation_load_state" />
 
+    <item
+        android:id="@+id/menu_emulation_autosave_interval"
+        android:title="@string/emulation_autosave_interval" />
 </menu>

@@ -280,6 +280,7 @@ class EmulationFragment :
                 R.id.menu_emulation_pause -> {
                     if (emulationState.isPaused) {
                         emulationState.unpause()
+                        scheduleAutoSave()
                         it.title = resources.getString(R.string.pause_emulation)
                         it.icon = ResourcesCompat.getDrawable(
                             resources,
@@ -288,6 +289,7 @@ class EmulationFragment :
                         )
                     } else {
                         emulationState.pause()
+                        autoSaveHandler.removeCallbacks(autoSaveRunnable)
                         it.title = resources.getString(R.string.resume_emulation)
                         it.icon = ResourcesCompat.getDrawable(
                             resources,
@@ -522,6 +524,7 @@ class EmulationFragment :
         if (!::emulationState.isInitialized) return
         if (NativeLibrary.isRunning()) {
             emulationState.unpause()
+            scheduleAutoSave()
 
             // If the overlay is enabled, we need to update the position if changed
             val position = activeSettings.get(IntSetting.PERFORMANCE_OVERLAY_POSITION)
@@ -540,6 +543,7 @@ class EmulationFragment :
 
         if (DirectoryInitialization.areCitraDirectoriesReady()) {
             emulationState.run(emulationActivity.isActivityRecreated)
+            scheduleAutoSave()
         } else {
             setupCitraDirectoriesThenStartEmulation()
         }
@@ -548,11 +552,13 @@ class EmulationFragment :
     override fun onPause() {
         if (NativeLibrary.isRunning()) {
             emulationState.pause()
+            autoSaveHandler.removeCallbacks(autoSaveRunnable)
         }
         super.onPause()
     }
 
     override fun onDestroyView() {
+        autoSaveHandler.removeCallbacks(autoSaveRunnable)
         perfStatsUpdater?.let { perfStatsUpdateHandler.removeCallbacks(it) }
         perfStatsUpdater = null
         super.onDestroyView()
@@ -584,6 +590,7 @@ class EmulationFragment :
             DirectoryInitializationState.CITRA_DIRECTORIES_INITIALIZED
         ) {
             emulationState.run(emulationActivity.isActivityRecreated)
+            scheduleAutoSave()
         } else if (directoryInitializationState ===
             DirectoryInitializationState.EXTERNAL_STORAGE_PERMISSION_NEEDED
         ) {
@@ -598,6 +605,43 @@ class EmulationFragment :
                 Toast.LENGTH_SHORT
             ).show()
         }
+    }
+
+    private val autoSaveHandler = Handler(Looper.getMainLooper())
+    private val autoSaveRunnable = object : Runnable {
+        override fun run() {
+            if (NativeLibrary.isRunning()) {
+                NativeLibrary.saveState(NativeLibrary.AUTOSAVE_SLOT)
+            }
+            scheduleAutoSave()
+        }
+    }
+
+    private fun autoSaveMinutes(): Int = preferences.getInt("autoSaveMinutes", 0)
+
+    private fun scheduleAutoSave() {
+        autoSaveHandler.removeCallbacks(autoSaveRunnable)
+        val minutes = autoSaveMinutes()
+        if (minutes > 0) {
+            autoSaveHandler.postDelayed(autoSaveRunnable, minutes * 60_000L)
+        }
+    }
+
+    private fun showAutoSaveIntervalMenu() {
+        val options = intArrayOf(0, 5, 10, 20, 30, 40)
+        val labels = options.map {
+            if (it == 0) getString(R.string.emulation_autosave_off)
+            else getString(R.string.emulation_autosave_minutes, it)
+        }.toTypedArray()
+        val current = options.indexOf(autoSaveMinutes()).coerceAtLeast(0)
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(R.string.emulation_autosave_interval)
+            .setSingleChoiceItems(labels, current) { dialog, which ->
+                preferences.edit().putInt("autoSaveMinutes", options[which]).apply()
+                scheduleAutoSave()
+                dialog.dismiss()
+            }
+            .show()
     }
 
     private fun showSavestateMenu() {
@@ -620,6 +664,11 @@ class EmulationFragment :
                     true
                 }
 
+                R.id.menu_emulation_autosave_interval -> {
+                    showAutoSaveIntervalMenu()
+                    true
+                }
+
                 else -> true
             }
         }
@@ -638,8 +687,10 @@ class EmulationFragment :
         popupMenu.menu.apply {
             for (i in 0 until NativeLibrary.SAVESTATE_SLOT_COUNT) {
                 val slot = i
-                var enableClick = isSaving
-                val text = if (slot == NativeLibrary.QUICKSAVE_SLOT) {
+                var enableClick = isSaving && slot != NativeLibrary.AUTOSAVE_SLOT
+                val text = if (slot == NativeLibrary.AUTOSAVE_SLOT) {
+                    getString(R.string.emulation_autosave_slot)
+                } else if (slot == NativeLibrary.QUICKSAVE_SLOT) {
                     getString(R.string.emulation_quicksave_slot)
                 } else {
                     getString(R.string.emulation_empty_state_slot, slot)
@@ -669,7 +720,9 @@ class EmulationFragment :
 
         savestates?.forEach {
             var text: String
-            if (it.slot == NativeLibrary.QUICKSAVE_SLOT) {
+            if (it.slot == NativeLibrary.AUTOSAVE_SLOT) {
+                text = getString(R.string.emulation_occupied_autosave_slot, it.time)
+            } else if (it.slot == NativeLibrary.QUICKSAVE_SLOT) {
                 text = getString(R.string.emulation_occupied_quicksave_slot, it.time)
             } else {
                 text = getString(R.string.emulation_occupied_state_slot, it.slot, it.time)
